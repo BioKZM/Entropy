@@ -5,3 +5,4 @@ poetry.lock
 pyproject.toml
 /venv
 keep_alive.py
+/__pycache__
