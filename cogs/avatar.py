@@ -17,7 +17,7 @@ class Avatar(commands.Cog):
             @disnake.ui.button(label = "Global Avatar",style = disnake.ButtonStyle.green)
             async def globalAvatar(self,button:disnake.ui.Button,inter:disnake.Interaction):
                 embed = disnake.Embed(
-                    title = f"{member.name}'s avatar",
+                    title = f"{member}'s avatar",
                     description = "\n",
                 )
                 embed.set_image(url=member.avatar.url)
@@ -37,7 +37,7 @@ class Avatar(commands.Cog):
 
 
         embed = disnake.Embed(
-            title = f"{member.display_name}'s avatar",
+            title = f"{member.display_name}#{member.discriminator}'s avatar",
             description = "\n",
         )
         embed.set_image(url=member.display_avatar.url)
