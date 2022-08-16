@@ -16,3 +16,7 @@ class Avatar(commands.Cog):
         sayı : Bir sayı gir {{COOL_NUMBER}}
         """
         await inter.response.send_message("Test")
+
+
+def setup(client):
+    client.add_cog(Avatar(client))
