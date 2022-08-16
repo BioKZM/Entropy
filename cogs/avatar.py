@@ -15,7 +15,7 @@ class Avatar(commands.Cog):
             lang = data['language']
 
         if lang == "tr":
-            with open("tr.json") as file:
+            with open("localization/tr.json") as file:
                 localization = json.load(file)
 
         if member == None:
