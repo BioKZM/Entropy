@@ -1,4 +1,6 @@
+from threading import local
 import disnake
+import json
 from disnake.ext import commands
 
 class Avatar(commands.Cog):
@@ -8,16 +10,24 @@ class Avatar(commands.Cog):
     @commands.slash_command(name = "avatar", description = "Display an user's avatar.")
     async def avatar(self,inter,member:disnake.Member = None):
         
+        with open(f"guildOptions/{inter.guild.id}.json") as file:
+            data = json.load(file)
+            lang = data['language']
+
+        if lang == "tr":
+            with open("tr.json") as file:
+                localization = json.load(file)
+
         if member == None:
             member = inter.author
 
 
 
         class GlobalView(disnake.ui.View):
-            @disnake.ui.button(label = "Global Avatar",style = disnake.ButtonStyle.green)
+            @disnake.ui.button(label = localization['AVATAR_LABEL_GLOBAL'],style = disnake.ButtonStyle.green)
             async def globalAvatar(self,button:disnake.ui.Button,inter:disnake.Interaction):
                 embed = disnake.Embed(
-                    title = f"{member}'s avatar",
+                    title = f"{member} {data['AVATAR_EMBED_TITLE']}",
                     description = "\n",
                 )
                 embed.set_image(url=member.avatar.url)
@@ -26,10 +36,10 @@ class Avatar(commands.Cog):
 
 
         class DisplayView(disnake.ui.View):
-            @disnake.ui.button(label = "Display Avatar",style = disnake.ButtonStyle.green)
+            @disnake.ui.button(label = localization['AVATAR_LABEL_DISPLAY'],style = disnake.ButtonStyle.green)
             async def displayAvatar(self,button:disnake.ui.Button,inter:disnake.Interaction):
                 embed = disnake.Embed(
-                    title = f"{member.display_name}#{member.discriminator}'s avatar",
+                    title = f"{member.display_name}#{member.discriminator} {localization['AVATAR_EMBED_TITLE']}",
                     description = "\n",
                 )
                 embed.set_image(url=member.display_avatar.url)
@@ -37,7 +47,7 @@ class Avatar(commands.Cog):
 
 
         embed = disnake.Embed(
-            title = f"{member.display_name}#{member.discriminator}'s avatar",
+            title = f"{member.display_name}#{member.discriminator} {localization['AVATAR_EMBED_TITLE']}",
             description = "\n",
         )
         embed.set_image(url=member.display_avatar.url)

@@ -1,6 +1,5 @@
 {
-    "AVATAR_NAME" : "avatar",
-    "AVATAR_DESCRIPTION" : "Displays selected user's avatar",
-    "MEMBER_NAME" : "member",
-    "MEMBER_DESCRIPTION" : "Select an user"
+    "AVATAR_LABEL_GLOBAL" : "Global Avatar",
+    "AVATAR_LABEL_DISPLAY" : "Display Avatar",
+    "AVATAR_EMBED_TITLE" : "'s avatar"
 }

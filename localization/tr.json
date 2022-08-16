@@ -1,6 +1,5 @@
 {
-    "AVATAR_NAME" : "avatar",
-    "AVATAR_DESCRIPTION" : "Seçilen kişinin avatarını görüntüle.",
-    "MEMBER_NAME" : "kullanıcı",
-    "MEMBER_DESCRIPTION" : "Bir kullanıcı seç."
+    "AVATAR_LABEL_GLOBAL" : "Global Avatar",
+    "AVATAR_LABEL_DISPLAY" : "Sunucu Avatarı",
+    "AVATAR_EMBED_TITLE" : "adlı kullanıcının avatarı"
 }
