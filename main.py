@@ -24,5 +24,5 @@ extensions = ["cogs.avatar"]
 for extension in extensions:
     client.load_extension(extension)
 
-
+client.i18n.load("localization/")
 client.run(TOKEN)
