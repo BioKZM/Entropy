@@ -5,16 +5,13 @@ class Avatar(commands.Cog):
     def __init__(self,client):
         self.client = client
 
-    @commands.slash_command(name = disnake.Localized(key="ADD_NUM_NAME"), description = "Bir kullanıcının seviyesini görüntülemek için kullan")
-    async def level(self,inter,sayı):
+    @commands.slash_command(name = "level", description = "Bir kullanıcının seviyesini görüntülemek için kullan")
+    async def level(self,inter,sayı = commands.Param(
+        name = "sayı",
+        description = "Lütfen bir sayı gir!"
+    )):
 
-        """
-        Bir sayıya 5 ekler. {{ADD_NUM}}
 
-        Parameters
-        ----------
-        sayı : Bir sayı gir {{COOL_NUMBER}}
-        """
         await inter.response.send_message("Test")
 
 
