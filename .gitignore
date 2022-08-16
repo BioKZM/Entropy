@@ -1,8 +1,8 @@
-/.config
-.replit
+.config/
+.replit/
 replit.nix
 poetry.lock
 pyproject.toml
-/venv
+venv/
 keep_alive.py
-/__pycache__
+__pycache__/
