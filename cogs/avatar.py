@@ -29,7 +29,7 @@ class Avatar(commands.Cog):
             @disnake.ui.button(label = "Display Avatar",style = disnake.ButtonStyle.green)
             async def displayAvatar(self,button:disnake.ui.Button,inter:disnake.Interaction):
                 embed = disnake.Embed(
-                    title = f"{member.display_name}'s avatar",
+                    title = f"{member.display_name}#{member.discriminator}'s avatar",
                     description = "\n",
                 )
                 embed.set_image(url=member.display_avatar.url)
