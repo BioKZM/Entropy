@@ -1,4 +1,3 @@
-from socket import timeout
 import disnake
 from disnake.ext import commands
 
@@ -16,10 +15,10 @@ class Avatar(commands.Cog):
 
         class GlobalView(disnake.ui.View):
             @disnake.ui.button(label = "Global Avatar",style = disnake.ButtonStyle.green)
-            async def globalAvatar(self, inter, button:disnake.ui.Button):
+            async def globalAvatar(self, inter:disnake.Interaction, button:disnake.ui.Button):
                 embed = disnake.Embed(
                     title = f"{member.name}'s avatar",
-                    description = "",
+                    description = "\n",
                 )
                 embed.set_image(url=member.avatar.url)
                 
@@ -28,10 +27,10 @@ class Avatar(commands.Cog):
 
         class DisplayView(disnake.ui.View):
             @disnake.ui.button(label = "Display Avatar",style = disnake.ButtonStyle.green)
-            async def displayAvatar(self,inter,button:disnake.ui.Button):
+            async def displayAvatar(self,inter:disnake.Interaction,button:disnake.ui.Button):
                 embed = disnake.Embed(
                     title = f"{member.display_name}'s avatar",
-                    description = "",
+                    description = "\n",
                 )
                 embed.set_image(url=member.display_avatar.url)
                 await inter.response.edit_message(embed=embed,view=GlobalView(timeout=None))
@@ -39,7 +38,7 @@ class Avatar(commands.Cog):
 
         embed = disnake.Embed(
             title = f"{member.display_name}'s avatar",
-            description = "",
+            description = "\n",
         )
         embed.set_image(url=member.display_avatar.url)
 
