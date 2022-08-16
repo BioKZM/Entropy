@@ -17,7 +17,7 @@ async def on_ready():
 @client.command()
 async def language(ctx):
     channel = client.get_channel(1009068358869717034)
-    await channel.send(ctx.guild.preffered_locale)
+    await channel.send(ctx.guild.preferred_locale)
 
 extensions = ["cogs.avatar"]
 

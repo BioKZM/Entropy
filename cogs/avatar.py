@@ -5,7 +5,7 @@ class Avatar(commands.Cog):
     def __init__(self,client):
         self.client = client
 
-    @commands.slash_command(name = Localized(key="ADD_NUM_NAME"), description = "Bir kullanıcının seviyesini görüntülemek için kullan")
+    @commands.slash_command(name = disnake.Localized(key="ADD_NUM_NAME"), description = "Bir kullanıcının seviyesini görüntülemek için kullan")
     async def level(self,inter,sayı):
 
         """
