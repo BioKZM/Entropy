@@ -15,7 +15,7 @@ class Avatar(commands.Cog):
 
         class GlobalView(disnake.ui.View):
             @disnake.ui.button(label = "Global Avatar",style = disnake.ButtonStyle.green)
-            async def globalAvatar(self, inter:disnake.Interaction, button:disnake.ui.Button):
+            async def globalAvatar(self,button:disnake.ui.Button,inter:disnake.Interaction):
                 embed = disnake.Embed(
                     title = f"{member.name}'s avatar",
                     description = "\n",
@@ -27,7 +27,7 @@ class Avatar(commands.Cog):
 
         class DisplayView(disnake.ui.View):
             @disnake.ui.button(label = "Display Avatar",style = disnake.ButtonStyle.green)
-            async def displayAvatar(self,inter:disnake.Interaction,button:disnake.ui.Button):
+            async def displayAvatar(self,button:disnake.ui.Button,inter:disnake.Interaction):
                 embed = disnake.Embed(
                     title = f"{member.display_name}'s avatar",
                     description = "\n",
