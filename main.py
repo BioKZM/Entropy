@@ -19,7 +19,7 @@ async def language(ctx):
     channel = client.get_channel(1009068358869717034)
     await channel.send(ctx.guild.preffered_locale)
 
-extensions = []
+extensions = ["cogs.avatar"]
 
 for extension in extensions:
     client.load_extension(extension)
@@ -27,5 +27,5 @@ for extension in extensions:
 
 
 
-
+client.i18n.load("localization/")
 client.run(TOKEN)
