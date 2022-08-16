@@ -4,7 +4,7 @@ from disnake.ext import commands
 from keep_alive import keep_alive
 
 keep_alive()
-
+TOKEN = os.environ["TOKEN"]
 
 client = commands.Bot(command_prefix="!",intents = disnake.Intents.all(), help_command=None)
 
@@ -26,5 +26,6 @@ for extension in extensions:
 
 
 
-TOKEN = os.environ["TOKEN"]
+
+
 client.run(TOKEN)
