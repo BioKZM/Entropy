@@ -1,0 +1,6 @@
+{
+    "AVATAR_NAME" : "avatar",
+    "AVATAR_DESCRIPTION" : "Displays selected user's avatar",
+    "MEMBER_NAME" : "member",
+    "MEMBER_DESCRIPTION" : "Select an user"
+}
