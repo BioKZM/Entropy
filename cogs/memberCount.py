@@ -8,21 +8,6 @@ class MemberCount(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-
-    async def createCategoryChannel(self,inter,name):
-        overwrites = {
-            inter.guild.default_role : disnake.PermissionOverwrite(
-                view_channel = True,
-                connect = False,
-                manage_channels = False,
-            )
-        }
-        await inter.guild.create_category(name=name,overwrites=overwrites,position=0)
-
-    async def createVoiceChannel(self,inter,name,category):
-        await inter.guild.create_voice_channel(name=name,category=category)
-
-
     @commands.slash_command(name = "statistics")
     async def statistics(self,inter):
         pass
@@ -42,9 +27,15 @@ class MemberCount(commands.Cog):
             with open(f"localization/en.json") as file:
                 localization = json.load(file)
 
-        category = await self.createCategoryChannel(inter,localization['SERVER_STATISTICS_CATEGORY_NAME'])
-        voiceChannel = await self.createVoiceChannel(inter,f"{localization['SERVER_STATISTICS_MEMBER_COUNT']} {inter.guild.member_count}",category)
-
+        overwrites = {
+            inter.guild.default_role : disnake.PermissionOverwrite(
+                view_channel = True,
+                connect = False,
+                manage_channels = False,
+            )
+        }
+        category = await inter.guild.create_category_channel(name = localization['SERVER_STATISTICS_CATEGORY_NAME'],overwrites = overwrites)
+        voiceChannel = await inter.guild.create_voice_channel(name = f"{localization['SERVER_STATISTICS_MEMBER_COUNT']} {inter.guild.member_count}",category = category)
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
             data['categoryID'] = category.id
             data['voiceChannelID'] = voiceChannel.id
