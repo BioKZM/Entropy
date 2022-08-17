@@ -44,7 +44,7 @@ class ChangeSettings(commands.Cog):
                 disnake.SelectOption(label = "English", value = "Change Entropy's language to English.", emoji = "🇺🇸"),
             ]
         
-            @disnake.ui.button(label = localization['LANGUAGE_BACK_BUTTON_LABEL'])
+            @disnake.ui.button(label = localization['SETTINGS_BACK_BUTTON_LABEL'])
             async def backButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
                 # embed = disnake.Embed(
                 #     title = localization['LANGUAGE_EMBED'],
