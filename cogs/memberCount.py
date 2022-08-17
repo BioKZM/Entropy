@@ -37,8 +37,8 @@ class MemberCount(commands.Cog):
         category = await inter.guild.create_category_channel(name = localization['SERVER_STATISTICS_CATEGORY_NAME'],overwrites = overwrites)
         voiceChannel = await inter.guild.create_voice_channel(name = f"{localization['SERVER_STATISTICS_MEMBER_COUNT']} {inter.guild.member_count}",category = category)
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
-            data['categoryID'] = category.id
-            data['voiceChannelID'] = voiceChannel.id
+            data['categoryID'] = str(category.id)
+            data['voiceChannelID'] = str(voiceChannel.id)
             json.dump(file,data,indent=4)
 
         embed = disnake.Embed(
