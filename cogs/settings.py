@@ -17,7 +17,7 @@ class ChangeSettings(commands.Cog):
         with open(f"guildOptions/{inter.guild.id}.json") as file:
             data = json.load(file)
             lang = data['language']
-            embedColor = data['embedColor']
+            embedColor = int(data['embedColor'])
 
         if lang == "tr":
             with open(f"localization/tr.json") as file:
@@ -38,7 +38,7 @@ class ChangeSettings(commands.Cog):
                     
                     with open(f"guildOptions/{inter.guild.id}.json") as file:
                         data = json.load(file)
-                        embedColor = data['embedColor']
+                        embedColor = int(data['embedColor'])
 
                     with open(f"guildOptions/{inter.guild.id}.json","w") as file:
                         data['language'] = "tr"
@@ -92,7 +92,7 @@ class ChangeSettings(commands.Cog):
             async def embedColor(self,select:disnake.ui.Select,inter:disnake.Interaction):
                 with open(f"guildOptions/{inter.guild.id}.json") as file:
                     data = json.load(file)
-                    embedColor = data['embedColor']
+                    embedColor = int(data['embedColor'])
 
                 if select.values == ["red"]:
                     data['embedColor'] = "0xFF0000"
