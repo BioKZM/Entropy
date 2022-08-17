@@ -17,6 +17,7 @@ class ChangeSettings(commands.Cog):
         with open(f"guildOptions/{inter.guild.id}.json") as file:
             data = json.load(file)
             lang = data['language']
+            embedColor = data['embedColor']
 
         if lang == "tr":
             with open(f"localization/tr.json") as file:
@@ -30,9 +31,6 @@ class ChangeSettings(commands.Cog):
                 disnake.SelectOption(label = "Türkçe", value = "tr", emoji = "🇹🇷"),
                 disnake.SelectOption(label = "English", value = "en", emoji = "🇺🇸"),
             ]
-        
-            
-            
 
             @disnake.ui.select(options = options)
             async def selectView(self,select:disnake.ui.Select, inter:disnake.Interaction):
@@ -40,6 +38,7 @@ class ChangeSettings(commands.Cog):
                     
                     with open(f"guildOptions/{inter.guild.id}.json") as file:
                         data = json.load(file)
+                        embedColor = data['embedColor']
 
                     with open(f"guildOptions/{inter.guild.id}.json","w") as file:
                         data['language'] = "tr"
@@ -50,7 +49,8 @@ class ChangeSettings(commands.Cog):
 
                     embed = disnake.Embed(
                         title = localization['SETTINGS_SELECT_EMBED_TITLE'],
-                        description = localization['SETTINGS_SELECT_EMBED_DESCRIPTION']
+                        description = localization['SETTINGS_SELECT_EMBED_DESCRIPTION'],
+                        color = embedColor
                     )
                     await inter.response.send_message(embed=embed,ephemeral=True)
                 
@@ -211,7 +211,8 @@ class ChangeSettings(commands.Cog):
 
         embed = disnake.Embed(
             title = localization['SETTINGS_EMBED_TITLE'],
-            description = localization['SETTINGS_EMBED_DESCRIPTION']
+            description = localization['SETTINGS_EMBED_DESCRIPTION'],
+            color = embedColor
         )
         await inter.response.send_message(embed=embed,view=MainView())
 
