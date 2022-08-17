@@ -1,6 +1,7 @@
 import disnake
 import json
 import shutil
+import os
 from disnake.ext import commands
 class GlobalServerCount(commands.Cog):
     def __init__(self, client):
@@ -15,6 +16,9 @@ class GlobalServerCount(commands.Cog):
         await channel.send(f"**{guild}** sunucusuna davet edildim.")
         channel = self.client.get_channel(1009434779508281385)
         await channel.edit(name = f"Mevcut Sunucular : {len(self.client.guilds)}")
+
+        os.mkdir(f"guilds/{guild.id}/options")
+        os.mkdir(f"guilds/{guild.id}/levels")
 
         with open(f"guilds/{guild.id}/options/{guild.id}.json","w") as file:
             data = {
