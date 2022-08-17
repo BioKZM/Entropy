@@ -23,5 +23,9 @@
     "SETTINGS_LANGUAGE_EMBED_DESCRIPTION" : "Entropy'nin dilini değiştirmek için aşağıdaki seçeneklerden birini seç.",
     "SETTINGS_EMBED_COLOR_EMBED_DESCRIPTION" : "Gömülü mesajların rengini değiştirmek için aşağıdaki seçenekleri kullan. Daha farklı renkler kullanmak için `/change color` komutunu kullan.",
     "SERVER_STATISTICS_CATEGORY_NAME" : "Sunucu İstatistikleri",
-    "SERVER_STATISTICS_MEMBER_COUNT" : "Üye Sayısı :"
+    "SERVER_STATISTICS_MEMBER_COUNT" : "Üye Sayısı :",
+    "SERVER_STATISTICS_SETUP_EMBED_TITLE" : "Kurulum İşlemi",
+    "SERVER_STATISTICS_SETUP_EMBED_DESCRIPTION" : "İstatistik sisteminin kurulumu tamamlandı. Kaldırmak için `/statistics delete` komutunu kullan.",
+    "SERVER_STATISTICS_DELETE_EMBED_TITLE" : "Silme İşlemi",
+    "SERVER_STATISTICS_DELETE_EMBED_DESCRIPTION" : "İstatistik sistemi silindi. Tekrardan kurmak için `/statistics setup` komutunu kullan."
 }
