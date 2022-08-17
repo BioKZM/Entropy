@@ -1,5 +1,12 @@
 {
     "AVATAR_LABEL_GLOBAL" : "Global Avatar",
     "AVATAR_LABEL_DISPLAY" : "Sunucu Avatarı",
-    "AVATAR_EMBED_TITLE" : "adlı kullanıcının avatarı"
+    "AVATAR_EMBED_TITLE" : "adlı kullanıcının avatarı",
+    "SETTINGS_EMBED_TITLE" : "Ayarlar",
+    "SETTINGS_EMBED_DESCRIPTION" : "Entropy'nin ayarlarını değiştirmek için aşağıdaki butonları kullan.",
+    "SETTINGS_LANGUAGE_BUTTON_LABEL" : "Dili Değiştir",
+    "SETTINGS_EMBED_COLOR_BUTTON_LABEL" : "Gömülü Mesajların Rengini Değiştir",
+    "SETTINGS_BACK_BUTTON_LABEL" : "Geri",
+    "SETTINGS_SELECT_EMBED_TITLE" : "Dil Değişikliği",
+    "SETTINGS_SELECT_EMBED_DESCRIPTION" : "Entropy'nin dili başarıyla Türkçe'ye değiştirildi.",
 }
