@@ -27,6 +27,7 @@ class ChangeSettings(commands.Cog):
                 localization = json.load(file)
 
         class LanguageView(disnake.ui.View):
+            
             options = [
                 disnake.SelectOption(label = "Türkçe", value = "tr", emoji = "🇹🇷"),
                 disnake.SelectOption(label = "English", value = "en", emoji = "🇺🇸"),
@@ -34,6 +35,7 @@ class ChangeSettings(commands.Cog):
 
             @disnake.ui.select(options = options)
             async def selectView(self,select:disnake.ui.Select, inter:disnake.Interaction):
+                
                 if select.values == ["tr"]:
                     
                     with open(f"guildOptions/{inter.guild.id}.json") as file:
@@ -210,17 +212,32 @@ class ChangeSettings(commands.Cog):
 
 
         class MainView(disnake.ui.View):
-            embed = disnake.Embed(
-                title = localization['SETTINGS_EMBED_TITLE'],
-                description = localization['SETTINGS_EMBED_DESCRIPTION'],
-                color = embedColor
-            )
+
+            
             @disnake.ui.button(label=localization['SETTINGS_LANGUAGE_BUTTON_LABEL'])
             async def languageButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
+                with open(f"guildOptions/{inter.guild.id}.json") as file:
+                    data = json.load(file)
+                    embedColor = int(data['embedColor'],16)
+
+                embed = disnake.Embed(
+                    title = localization['SETTINGS_EMBED_TITLE'],
+                    description = localization['SETTINGS_EMBED_DESCRIPTION'],
+                    color = embedColor
+                )
                 
                 await inter.response.edit_message(embed=embed,view = LanguageView())
             @disnake.ui.button(label=localization['SETTINGS_EMBED_COLOR_BUTTON_LABEL'])
             async def embedButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
+                with open(f"guildOptions/{inter.guild.id}.json") as file:
+                    data = json.load(file)
+                    embedColor = int(data['embedColor'],16)
+
+                embed = disnake.Embed(
+                    title = localization['SETTINGS_EMBED_TITLE'],
+                    description = localization['SETTINGS_EMBED_DESCRIPTION'],
+                    color = embedColor
+                )
                 await inter.response.edit_message(embed=embed,view = EmbedColorView())
 
 
