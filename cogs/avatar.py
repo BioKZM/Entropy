@@ -10,7 +10,7 @@ class Avatar(commands.Cog):
     @commands.slash_command(name = "avatar", description = "Display an user's avatar.")
     async def avatar(self,inter,member:disnake.Member = None):
         
-        with open(f"guildOptions/{inter.guild.id}.json") as file:
+        with open(f"guilds/{inter.guild.id}/optipns/{inter.guild.id}.json") as file:
             data = json.load(file)
             lang = data['language']
 
