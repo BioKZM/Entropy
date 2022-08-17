@@ -74,6 +74,10 @@ class MemberCount(commands.Cog):
         await categoryChannel.delete()
         await voiceChannel.delete()
 
+        with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
+            del data['categoryID']
+            del data['voiceChannelID']
+            json.dump(data,file,indent=4)
         embed = disnake.Embed(
             title = localization['SERVER_STATISTICS_DELETE_EMBED_TITLE'],
             description = localization['SERVER_STATISTICS_DELETE_EMBED_DESCRIPTION'],
