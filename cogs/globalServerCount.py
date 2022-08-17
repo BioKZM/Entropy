@@ -2,10 +2,9 @@ from pydoc import cli
 import disnake
 from disnake.ext import commands
 
-
 class GlobalServerCount(commands.Cog):
     def __init__(self, client):
-        self.client = client
+        self.client = commands.Bot(command_prefix="!",intents = disnake.Intents.all(), help_command=None)
         self.channel = self.client.get_channel(1009425217669582969)
 
 
