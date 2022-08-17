@@ -110,3 +110,8 @@ class ChangeSettings(commands.Cog):
             description = localization['SETTINGS_EMBED_DESCRIPTION']
         )
         await inter.response.send_message(embed=embed,view=MainView())
+
+
+
+def setup(client):
+    client.add_cog(ChangeSettings(client))
