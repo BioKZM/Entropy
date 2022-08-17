@@ -210,12 +210,18 @@ class ChangeSettings(commands.Cog):
 
 
         class MainView(disnake.ui.View):
+            embed = disnake.Embed(
+                title = localization['SETTINGS_EMBED_TITLE'],
+                description = localization['SETTINGS_EMBED_DESCRIPTION'],
+                color = embedColor
+            )
             @disnake.ui.button(label=localization['SETTINGS_LANGUAGE_BUTTON_LABEL'])
             async def languageButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
-                await inter.response.edit_message(view = LanguageView())
+                
+                await inter.response.edit_message(embed=embed,view = LanguageView())
             @disnake.ui.button(label=localization['SETTINGS_EMBED_COLOR_BUTTON_LABEL'])
             async def embedButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
-                await inter.response.edit_message(view = EmbedColorView())
+                await inter.response.edit_message(embed=embed,view = EmbedColorView())
 
 
 
