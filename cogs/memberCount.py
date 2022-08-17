@@ -17,7 +17,7 @@ class MemberCount(commands.Cog):
                 manage_channels = False,
             )
         }
-        await inter.guild.create_category_channel(name=name,overwrites=overwrites,position=0)
+        await inter.guild.create_category(name=name,overwrites=overwrites,position=0)
 
     async def createVoiceChannel(self,inter,name,category):
         await inter.guild.create_voice_channel(name=name,category=category)
