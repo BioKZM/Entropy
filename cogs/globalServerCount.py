@@ -48,15 +48,18 @@ class GlobalServerCount(commands.Cog):
 
     @commands.Cog.listener()
     async def on_guild_remove(self,guild):
-        channel = self.client.get_channel(1009425217669582969)
-        await channel.send(f"**{guild}** sunucusundan atıldım.")
-        channel = self.client.get_channel(1009434779508281385)
-        await channel.edit(name = f"Mevcut Sunucular : {len(self.client.guilds)}")
+        
         try:
             shutil.rmtree(f'guilds/{guild.id}')
         except Exception as err:
             channel = self.client.get_channel(1009425217669582969)
             await channel.send(f"**{guild}** sunucusunun dosyaları silinemedi. Hata kodu : ```{err}```")
+
+        channel = self.client.get_channel(1009425217669582969)
+        await channel.send(f"**{guild}** sunucusundan atıldım.")
+        channel = self.client.get_channel(1009434779508281385)
+        await channel.edit(name = f"Mevcut Sunucular : {len(self.client.guilds)}")
+        
         
 
 
