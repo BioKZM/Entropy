@@ -31,13 +31,8 @@ class ChangeSettings(commands.Cog):
                 disnake.SelectOption(label = "English", value = "Change Entropy's language to English.", emoji = "🇺🇸"),
             ]
         
-            @disnake.ui.button(label = localization['SETTINGS_BACK_BUTTON_LABEL'])
-            async def backButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
-                # embed = disnake.Embed(
-                #     title = localization['LANGUAGE_EMBED'],
-                #     description = localization['LANGUAGE_EMBED_DESCRIPTION']
-                # )
-                await inter.response.edit_message(view = MainView(timeout=None))
+            
+            
 
             @disnake.ui.select(options = options)
             async def selectView(self,select:disnake.ui.Select, inter:disnake.Interaction):
@@ -57,7 +52,7 @@ class ChangeSettings(commands.Cog):
                         title = localization['SETTINGS_SELECT_EMBED_TITLE'],
                         description = localization['SETTINGS_SELECT_EMBED_DESCRIPTION']
                     )
-                    await inter.response.send_message(embed=embed,hidden=True)
+                    await inter.response.send_message(embed=embed,ephemeral=True)
                 
                 if select.values == ["en"]:
 
@@ -75,8 +70,11 @@ class ChangeSettings(commands.Cog):
                         description = localization['SETTINGS_SELECT_EMBED_DESCRIPTION']
                     )
                 
-                    await inter.response.send_message(embed=embed,hidden=True)
+                    await inter.response.send_message(embed=embed,ephemeral=True)
 
+            @disnake.ui.button(label = localization['SETTINGS_BACK_BUTTON_LABEL'])
+            async def backButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
+                await inter.response.edit_message(view = MainView(timeout=None))
 
         # class EmbedColorView(disnake.ui.View):
         #     @disnake.ui.select()
