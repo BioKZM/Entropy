@@ -17,28 +17,32 @@ class GlobalServerCount(commands.Cog):
         channel = self.client.get_channel(1009434779508281385)
         await channel.edit(name = f"Mevcut Sunucular : {len(self.client.guilds)}")
 
-        os.mkdir(f"guilds/{guild.id}/options")
-        os.mkdir(f"guilds/{guild.id}/levels")
+        try:
+            os.mkdir(f"guilds/{guild.id}/options")
+            os.mkdir(f"guilds/{guild.id}/levels")
 
-        with open(f"guilds/{guild.id}/options/{guild.id}.json","w") as file:
-            data = {
-                "language" : "en",
-                "embedColor" : "0xCC0000"
-            }
-            json.dump(data,file,indent=4)
-
-
-        for member in guild.members:
-            with open(f"guilds/{guild.id}/levels/{member.id}","w") as file:
+            with open(f"guilds/{guild.id}/options/{guild.id}.json","w") as file:
                 data = {
-                    "XP" : 1,
-                    "maximumXP" : 1000,
-                    "level" : 0,
-                    "XPmax" : 1000,
-                    "XPmin" : 0,
-                    "XPdiv" : 10
+                    "language" : "en",
+                    "embedColor" : "0xCC0000"
                 }
                 json.dump(data,file,indent=4)
+
+
+            for member in guild.members:
+                with open(f"guilds/{guild.id}/levels/{member.id}.json","w") as file:
+                    data = {
+                        "XP" : 1,
+                        "maximumXP" : 1000,
+                        "level" : 0,
+                        "XPmax" : 1000,
+                        "XPmin" : 0,
+                        "XPdiv" : 10
+                    }
+                    json.dump(data,file,indent=4)
+        except Exception as err:
+            channel = self.client.get_channel(1009425217669582969)
+            await channel.send(f"**{guild}** sunucusunun dosyaları oluşturulamadı! Hata kodu : ```{err}```")
 
 
     @commands.Cog.listener()
@@ -47,8 +51,11 @@ class GlobalServerCount(commands.Cog):
         await channel.send(f"**{guild}** sunucusundan atıldım.")
         channel = self.client.get_channel(1009434779508281385)
         await channel.edit(name = f"Mevcut Sunucular : {len(self.client.guilds)}")
-        shutil.rmtree(f'guilds/{guild.id}')
-
+        try:
+            shutil.rmtree(f'guilds/{guild.id}')
+        except Exception as err:
+            channel = self.client.get_channel(1009425217669582969)
+            await channel.send(f"**{guild}** sunucusunun dosyaları silinemedi. Hata kodu : ```{err}```")
         
 
 
