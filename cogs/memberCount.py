@@ -1,3 +1,4 @@
+from turtle import position
 import disnake
 import json
 import asyncio
@@ -16,11 +17,10 @@ class MemberCount(commands.Cog):
                 manage_channels = False,
             )
         }
-        await inter.guild.create_category_channel(name=name,overwrites=overwrites)
+        await inter.guild.create_category_channel(name=name,overwrites=overwrites,position=0)
 
     async def createVoiceChannel(self,inter,name,category):
-        guild = inter.guild
-        await guild.create_voice_channel(name=name,category=category)
+        await inter.guild.create_voice_channel(name=name,category=category)
 
 
     @commands.slash_command(name = "statistics")
@@ -43,7 +43,6 @@ class MemberCount(commands.Cog):
                 localization = json.load(file)
 
         category = await self.createCategoryChannel(inter,localization['SERVER_STATISTICS_CATEGORY_NAME'])
-        await asyncio.sleep(3)
         voiceChannel = await self.createVoiceChannel(inter,f"{localization['SERVER_STATISTICS_MEMBER_COUNT']} {inter.guild.member_count}",category)
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
             data['categoryID'] = category.id
