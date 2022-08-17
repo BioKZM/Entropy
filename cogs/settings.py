@@ -88,7 +88,7 @@ class ChangeSettings(commands.Cog):
                 disnake.SelectOption(label = localization['COLOR_BLACK'], value = "black", emoji = "⬛"),
                 disnake.SelectOption(label = localization['COLOR_WHITE'], value = "white", emoji = "⬜"),
             ]
-            @disnake.ui.select(option = options)
+            @disnake.ui.select(options = options)
             async def embedColor(self,select:disnake.ui.Select,inter:disnake.Interaction):
                 with open(f"guildOptions/{inter.guild.id}.json") as file:
                     data = json.load(file)
