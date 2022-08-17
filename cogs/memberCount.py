@@ -34,8 +34,10 @@ class MemberCount(commands.Cog):
                 manage_channels = False,
             )
         }
-        category = await inter.guild.create_category_channel(name = localization['SERVER_STATISTICS_CATEGORY_NAME'],overwrites = overwrites)
+        category = await inter.guild.create_category_channel(name = localization['SERVER_STATISTICS_CATEGORY_NAME'],overwrites = overwrites,position = 0)
         voiceChannel = await inter.guild.create_voice_channel(name = f"{localization['SERVER_STATISTICS_MEMBER_COUNT']} {inter.guild.member_count}",category = category)
+        with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
+            data = json.load(file)
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
             data['categoryID'] = str(category.id)
             data['voiceChannelID'] = str(voiceChannel.id)
