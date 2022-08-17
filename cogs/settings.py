@@ -112,8 +112,8 @@ class ChangeSettings(commands.Cog):
                         json.dump(data,file,indent=4)
 
                     embed = disnake.Embed(
-                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
-                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_RED']}",
+                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
+                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_RED']}",
                         color = embedColor,
                     )
                     await inter.response.send_message(embed=embed,ephemeral=True)
@@ -124,8 +124,8 @@ class ChangeSettings(commands.Cog):
                     with open(f"guildOptions/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
-                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
-                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_ORANGE']}",
+                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
+                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_ORANGE']}",
                         color = embedColor,
                     )
                     await inter.response.send_message(embed=embed,ephemeral=True)
@@ -136,8 +136,8 @@ class ChangeSettings(commands.Cog):
                     with open(f"guildOptions/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
-                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
-                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_YELLOW']}",
+                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
+                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_YELLOW']}",
                         color = embedColor,
                     )
                     await inter.response.send_message(embed=embed,ephemeral=True)
@@ -148,8 +148,8 @@ class ChangeSettings(commands.Cog):
                     with open(f"guildOptions/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
-                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
-                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_GREEN']}",
+                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
+                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_GREEN']}",
                         color = embedColor,
                     )
                     await inter.response.send_message(embed=embed,ephemeral=True)
@@ -160,8 +160,8 @@ class ChangeSettings(commands.Cog):
                     with open(f"guildOptions/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
-                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
-                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_BLUE']}",
+                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
+                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_BLUE']}",
                         color = embedColor,
                     )
                     await inter.response.send_message(embed=embed,ephemeral=True)
@@ -172,8 +172,8 @@ class ChangeSettings(commands.Cog):
                     with open(f"guildOptions/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
-                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
-                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_PURPLE']}",
+                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
+                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_PURPLE']}",
                         color = embedColor,
                     )
                     await inter.response.send_message(embed=embed,ephemeral=True)
@@ -184,8 +184,8 @@ class ChangeSettings(commands.Cog):
                     with open(f"guildOptions/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
-                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
-                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_BROWN']}",
+                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
+                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_BROWN']}",
                         color = embedColor,
                     )
                     await inter.response.send_message(embed=embed,ephemeral=True)
@@ -196,8 +196,8 @@ class ChangeSettings(commands.Cog):
                     with open(f"guildOptions/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
-                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
-                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_BLACK']}",
+                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
+                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_BLACK']}",
                         color = embedColor,
                     )
                     await inter.response.send_message(embed=embed,ephemeral=True)
@@ -208,8 +208,8 @@ class ChangeSettings(commands.Cog):
                     with open(f"guildOptions/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
-                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
-                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_WHITE']}",
+                        title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
+                        description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_WHITE']}",
                         color = embedColor,
                     )
                     await inter.response.send_message(embed=embed,ephemeral=True)
@@ -240,7 +240,7 @@ class ChangeSettings(commands.Cog):
 
                 embed = disnake.Embed(
                     title = localization['SETTINGS_EMBED_TITLE'],
-                    description = localization['SETTINGS_EMBED_DESCRIPTION'],
+                    description = localization['SETTINGS_LANGUAGE_EMBED_DESCRIPTION'],
                     color = embedColor
                 )
                 
@@ -253,7 +253,7 @@ class ChangeSettings(commands.Cog):
 
                 embed = disnake.Embed(
                     title = localization['SETTINGS_EMBED_TITLE'],
-                    description = localization['SETTINGS_EMBED_DESCRIPTION'],
+                    description = localization['SETTINGS_EMBED_COLOR_EMBED_DESCRIPTION'],
                     color = embedColor
                 )
                 await inter.response.edit_message(embed=embed,view = EmbedColorView())

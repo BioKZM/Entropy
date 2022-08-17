@@ -18,6 +18,8 @@
     "COLOR_BROWN" : "Kahverengi",
     "COLOR_BLACK" : "Siyah",
     "COLOR_WHITE" : "Beyaz",
-    "SETTINGS_EMBED_COLOR_CHANGE_TITLE" : "Renk Değişikliği",
-    "SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION" : "Gömülü mesajların rengi başarıyla şu renge değiştirildi :"    
+    "SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE" : "Renk Değişikliği",
+    "SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION" : "Gömülü mesajların rengi başarıyla şu renge değiştirildi :",
+    "SETTINGS_LANGUAGE_EMBED_DESCRIPTION" : "Entropy'nin dilini değiştirmek için aşağıdaki seçeneklerden birini seç.",
+    "SETTINGS_EMBED_COLOR_EMBED_DESCRIPTION" : "Gömülü mesajların rengini değiştirmek için aşağıdaki seçenekleri kullan. Daha farklı renkler kullanmak için `/change color` komutunu kullan."
 }
