@@ -1,5 +1,6 @@
 import disnake
 import json
+import asyncio
 from disnake.ext import commands
 
 class MemberCount(commands.Cog):
@@ -42,6 +43,7 @@ class MemberCount(commands.Cog):
                 localization = json.load(file)
 
         category = await self.createCategoryChannel(inter,localization['SERVER_STATISTICS_CATEGORY_NAME'])
+        await asyncio.sleep(3)
         voiceChannel = await self.createVoiceChannel(inter,f"{localization['SERVER_STATISTICS_MEMBER_COUNT']} {inter.guild.member_count}",category)
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
             data['categoryID'] = category.id
