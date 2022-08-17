@@ -76,6 +76,15 @@ class ChangeSettings(commands.Cog):
 
             @disnake.ui.button(label = localization['SETTINGS_BACK_BUTTON_LABEL'])
             async def backButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
+                with open(f"guildOptions/{inter.guild.id}.json") as file:
+                    data = json.load(file)
+                    embedColor = int(data['embedColor'],16)
+
+                embed = disnake.Embed(
+                    title = localization['SETTINGS_EMBED_TITLE'],
+                    description = localization['SETTINGS_EMBED_DESCRIPTION'],
+                    color = embedColor
+                )
                 await inter.response.edit_message(view = MainView(timeout=None))
 
         class EmbedColorView(disnake.ui.View):
@@ -207,7 +216,16 @@ class ChangeSettings(commands.Cog):
                 
             @disnake.ui.button(label = localization['SETTINGS_BACK_BUTTON_LABEL'])
             async def backButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
-                await inter.response.edit_message(view = MainView(timeout=None))
+                with open(f"guildOptions/{inter.guild.id}.json") as file:
+                    data = json.load(file)
+                    embedColor = int(data['embedColor'],16)
+
+                embed = disnake.Embed(
+                    title = localization['SETTINGS_EMBED_TITLE'],
+                    description = localization['SETTINGS_EMBED_DESCRIPTION'],
+                    color = embedColor
+                )
+                await inter.response.edit_message(embed=embed,view = MainView(timeout=None))
 
 
 
