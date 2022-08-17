@@ -31,7 +31,7 @@ class MemberCount(commands.Cog):
     async def statisticsSetup(self,inter):
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
-            embedColor = data['embedColor']
+            embedColor = int(data['embedColor'])
             lang = data['language']
 
         if lang == "tr":
@@ -43,18 +43,18 @@ class MemberCount(commands.Cog):
                 localization = json.load(file)
 
         category = await self.createCategoryChannel(inter,localization['SERVER_STATISTICS_CATEGORY_NAME'])
+        voiceChannel = await self.createVoiceChannel(inter,f"{localization['SERVER_STATISTICS_MEMBER_COUNT']} {inter.guild.member_count}",category)
+
+        with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
+            data['categoryID'] = category.id
+            data['voiceChannelID'] = voiceChannel.id
+            json.dump(file,data,indent=4)
 
         embed = disnake.Embed(
             title = localization["SERVER_STATISTICS_SETUP_EMBED_TITLE"],
             description = localization['SERVER_STATISTICS_SETUP_EMBED_DESCRIPTION'],
             color = embedColor
         )
-
-        voiceChannel = await self.createVoiceChannel(inter,f"{localization['SERVER_STATISTICS_MEMBER_COUNT']} {inter.guild.member_count}",category)
-        with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
-            data['categoryID'] = category.id
-            data['voiceChannelID'] = voiceChannel.id
-            json.dump(file,data,indent=4)
         await inter.response.send_message(embed=embed,ephemeral=True)
 
         
