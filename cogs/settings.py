@@ -97,6 +97,8 @@ class ChangeSettings(commands.Cog):
                 if select.values == ["red"]:
                     data['embedColor'] = "0xFF0000"
                     embedColor = int(data['embedColor'],16) 
+                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                        json.dump(data,file,indent=4)
 
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
@@ -108,7 +110,8 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["orange"]:
                     data['embedColor'] = "0xFF5F15"
                     embedColor = int(data['embedColor'],16) 
-
+                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                        json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_ORANGE']}",
@@ -119,7 +122,8 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["yellow"]:
                     data['embedColor'] = "0xFFFF00"
                     embedColor = int(data['embedColor'],16) 
-
+                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                        json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_YELLOW']}",
@@ -130,7 +134,8 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["green"]:
                     data['embedColor'] = "0x00b100"
                     embedColor = int(data['embedColor'],16) 
-
+                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                        json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_GREEN']}",
@@ -141,7 +146,8 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["blue"]:
                     data['embedColor'] = "0x0096FF"
                     embedColor = int(data['embedColor'],16) 
-
+                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                        json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_BLUE']}",
@@ -152,7 +158,8 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["purple"]:
                     data['embedColor'] = "0xA020F0"
                     embedColor = int(data['embedColor'],16) 
-
+                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                        json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_PURPLE']}",
@@ -163,7 +170,8 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["brown"]:
                     data['embedColor'] = "0x8B4513"
                     embedColor = int(data['embedColor'],16) 
-
+                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                        json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_BROWN']}",
@@ -174,7 +182,8 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["black"]:
                     data['embedColor'] = "0x000000"
                     embedColor = int(data['embedColor'],16) 
-
+                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                        json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_BLACK']}",
@@ -185,7 +194,8 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["white"]:
                     data['embedColor'] = "0xFFFFFF"
                     embedColor = int(data['embedColor'],16) 
-
+                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                        json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_TITLE'],
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION']} {localization['COLOR_WHITE']}",
