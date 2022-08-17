@@ -13,4 +13,4 @@ class GlobalServerCount(commands.Cog):
         await channel.send(f"**{guild}** sunucusuna davet edildim.")
 
 def setup(client):
-    client.add_cog(GlobalServerCount)
+    client.add_cog(GlobalServerCount(client))
