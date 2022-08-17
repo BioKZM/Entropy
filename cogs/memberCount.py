@@ -16,9 +16,9 @@ class MemberCount(commands.Cog):
             )
         }
 
-    async def createVoiceChannel(self,inter,name,category,topic=None):
+    async def createVoiceChannel(self,inter,name,category):
         guild = inter.guild
-        await guild.create_voice_channel(name=name,category=category,topic=topic)
+        await guild.create_voice_channel(name=name,category=category)
 
 
     @commands.slash_command(name = "statistics")
