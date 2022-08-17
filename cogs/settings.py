@@ -27,8 +27,8 @@ class ChangeSettings(commands.Cog):
 
         class LanguageView(disnake.ui.View):
             options = [
-                disnake.SelectOption(label = "Türkçe", value = "Entropy'nin dilini Türkçe'ye çevir.", emoji = "🇹🇷"),
-                disnake.SelectOption(label = "English", value = "Change Entropy's language to English.", emoji = "🇺🇸"),
+                disnake.SelectOption(label = "Türkçe", value = "tr", emoji = "🇹🇷"),
+                disnake.SelectOption(label = "English", value = "en", emoji = "🇺🇸"),
             ]
         
             
@@ -52,7 +52,7 @@ class ChangeSettings(commands.Cog):
                         title = localization['SETTINGS_SELECT_EMBED_TITLE'],
                         description = localization['SETTINGS_SELECT_EMBED_DESCRIPTION']
                     )
-                    await inter.response.send_message(embed=embed,ephemeral=True)
+                    await inter.response.send_message(embed=embed,hidden=True)
                 
                 if select.values == ["en"]:
 
@@ -70,7 +70,7 @@ class ChangeSettings(commands.Cog):
                         description = localization['SETTINGS_SELECT_EMBED_DESCRIPTION']
                     )
                 
-                    await inter.response.send_message(embed=embed,ephemeral=True)
+                    await inter.response.send_message(embed=embed,hidden=True)
 
             @disnake.ui.button(label = localization['SETTINGS_BACK_BUTTON_LABEL'])
             async def backButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
