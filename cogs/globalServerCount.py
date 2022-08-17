@@ -18,6 +18,7 @@ class GlobalServerCount(commands.Cog):
         await channel.edit(name = f"Mevcut Sunucular : {len(self.client.guilds)}")
 
         try:
+            os.mkdir(f"guilds/{guild.id}")
             os.mkdir(f"guilds/{guild.id}/options")
             os.mkdir(f"guilds/{guild.id}/levels")
 
