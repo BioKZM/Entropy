@@ -14,7 +14,7 @@ class ChangeSettings(commands.Cog):
     @commands.slash_command(name = "settings",description = "Change Entropy's settings.")
     async def changeSettings(self,inter):
 
-        with open(f"guildOptions/{inter.guild.id}.json") as file:
+        with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
             lang = data['language']
             embedColor = int(data['embedColor'],16)
@@ -38,11 +38,11 @@ class ChangeSettings(commands.Cog):
                 
                 if select.values == ["tr"]:
                     
-                    with open(f"guildOptions/{inter.guild.id}.json") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
                         data = json.load(file)
                         embedColor = int(data['embedColor'],16)
 
-                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
                         data['language'] = "tr"
                         json.dump(data,file,indent=4)
 
@@ -58,9 +58,9 @@ class ChangeSettings(commands.Cog):
                 
                 if select.values == ["en"]:
 
-                    with open(f"guildOptions/{inter.guild.id}.json") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
                         data = json.load(file)
-                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
                         data['language'] = "en"
                         json.dump(data,file,indent=4)   
 
@@ -76,7 +76,7 @@ class ChangeSettings(commands.Cog):
 
             @disnake.ui.button(label = localization['SETTINGS_BACK_BUTTON_LABEL'])
             async def backButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
-                with open(f"guildOptions/{inter.guild.id}.json") as file:
+                with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
                     data = json.load(file)
                     embedColor = int(data['embedColor'],16)
 
@@ -101,14 +101,14 @@ class ChangeSettings(commands.Cog):
             ]
             @disnake.ui.select(options = options)
             async def embedColor(self,select:disnake.ui.Select,inter:disnake.Interaction):
-                with open(f"guildOptions/{inter.guild.id}.json") as file:
+                with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
                     data = json.load(file)
                     embedColor = int(data['embedColor'],16)
 
                 if select.values == ["red"]:
                     data['embedColor'] = "0xFF0000"
                     embedColor = int(data['embedColor'],16) 
-                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
 
                     embed = disnake.Embed(
@@ -121,7 +121,7 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["orange"]:
                     data['embedColor'] = "0xFF5F15"
                     embedColor = int(data['embedColor'],16) 
-                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
@@ -133,7 +133,7 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["yellow"]:
                     data['embedColor'] = "0xFFFF00"
                     embedColor = int(data['embedColor'],16) 
-                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
@@ -145,7 +145,7 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["green"]:
                     data['embedColor'] = "0x00b100"
                     embedColor = int(data['embedColor'],16) 
-                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
@@ -157,7 +157,7 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["blue"]:
                     data['embedColor'] = "0x0096FF"
                     embedColor = int(data['embedColor'],16) 
-                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
@@ -169,7 +169,7 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["purple"]:
                     data['embedColor'] = "0xA020F0"
                     embedColor = int(data['embedColor'],16) 
-                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
@@ -181,7 +181,7 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["brown"]:
                     data['embedColor'] = "0x8B4513"
                     embedColor = int(data['embedColor'],16) 
-                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
@@ -193,7 +193,7 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["black"]:
                     data['embedColor'] = "0x000000"
                     embedColor = int(data['embedColor'],16) 
-                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
@@ -205,7 +205,7 @@ class ChangeSettings(commands.Cog):
                 elif select.values == ["white"]:
                     data['embedColor'] = "0xFFFFFF"
                     embedColor = int(data['embedColor'],16) 
-                    with open(f"guildOptions/{inter.guild.id}.json","w") as file:
+                    with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
                         json.dump(data,file,indent=4)
                     embed = disnake.Embed(
                         title = localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_TITLE'],
@@ -216,7 +216,7 @@ class ChangeSettings(commands.Cog):
                 
             @disnake.ui.button(label = localization['SETTINGS_BACK_BUTTON_LABEL'])
             async def backButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
-                with open(f"guildOptions/{inter.guild.id}.json") as file:
+                with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
                     data = json.load(file)
                     embedColor = int(data['embedColor'],16)
 
@@ -234,7 +234,7 @@ class ChangeSettings(commands.Cog):
             
             @disnake.ui.button(label=localization['SETTINGS_LANGUAGE_BUTTON_LABEL'])
             async def languageButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
-                with open(f"guildOptions/{inter.guild.id}.json") as file:
+                with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
                     data = json.load(file)
                     embedColor = int(data['embedColor'],16)
 
@@ -247,7 +247,7 @@ class ChangeSettings(commands.Cog):
                 await inter.response.edit_message(embed=embed,view = LanguageView())
             @disnake.ui.button(label=localization['SETTINGS_EMBED_COLOR_BUTTON_LABEL'])
             async def embedButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
-                with open(f"guildOptions/{inter.guild.id}.json") as file:
+                with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
                     data = json.load(file)
                     embedColor = int(data['embedColor'],16)
 
