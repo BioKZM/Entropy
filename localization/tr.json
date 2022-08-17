@@ -8,5 +8,16 @@
     "SETTINGS_EMBED_COLOR_BUTTON_LABEL" : "Gömülü Mesajların Rengini Değiştir",
     "SETTINGS_BACK_BUTTON_LABEL" : "Geri",
     "SETTINGS_SELECT_EMBED_TITLE" : "Dil Değişikliği",
-    "SETTINGS_SELECT_EMBED_DESCRIPTION" : "Entropy'nin dili başarıyla Türkçe'ye değiştirildi."
+    "SETTINGS_SELECT_EMBED_DESCRIPTION" : "Entropy'nin dili başarıyla Türkçe'ye değiştirildi.",
+    "COLOR_RED" : "Kırmızı",
+    "COLOR_ORANGE" : "Turuncu",
+    "COLOR_YELLOW" : "Sarı",
+    "COLOR_GREEN" : "Yeşil",
+    "COLOR_BLUE" : "Mavi",
+    "COLOR_PURPLE" : "Mor",
+    "COLOR_BROWN" : "Kahverengi",
+    "COLOR_BLACK" : "Siyah",
+    "COLOR_WHITE" : "Beyaz",
+    "SETTINGS_EMBED_COLOR_CHANGE_TITLE" : "Renk Değişikliği",
+    "SETTINGS_EMBED_COLOR_CHANGE_DESCRIPTION" : "Gömülü mesajların rengi başarıyla şu renge değiştirildi :"    
 }
