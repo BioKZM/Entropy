@@ -21,6 +21,7 @@ class GlobalServerCount(commands.Cog):
             os.mkdir(f"guilds/{guild.id}")
             os.mkdir(f"guilds/{guild.id}/options")
             os.mkdir(f"guilds/{guild.id}/levels")
+            os.mkdir(f"guilds/{guild.id}/files/TTS")
 
             with open(f"guilds/{guild.id}/options/{guild.id}.json","w") as file:
                 data = {
@@ -48,7 +49,6 @@ class GlobalServerCount(commands.Cog):
 
     @commands.Cog.listener()
     async def on_guild_remove(self,guild):
-        
         try:
             shutil.rmtree(f'guilds/{guild.id}')
         except Exception as err:

@@ -27,5 +27,8 @@
     "SERVER_STATISTICS_SETUP_EMBED_TITLE" : "Kurulum İşlemi",
     "SERVER_STATISTICS_SETUP_EMBED_DESCRIPTION" : "İstatistik sisteminin kurulumu tamamlandı. Kaldırmak için `/statistics delete` komutunu kullan.",
     "SERVER_STATISTICS_DELETE_EMBED_TITLE" : "Silme İşlemi",
-    "SERVER_STATISTICS_DELETE_EMBED_DESCRIPTION" : "İstatistik sistemi silindi. Tekrardan kurmak için `/statistics setup` komutunu kullan."
+    "SERVER_STATISTICS_DELETE_EMBED_DESCRIPTION" : "İstatistik sistemi silindi. Tekrardan kurmak için `/statistics setup` komutunu kullan.",
+    "COLOR_CHANGE_EMBED_TITLE" : "Renk Değişimi",
+    "COLOR_CHANGE_EMBED_DESCRIPTION" : "Gömülü mesajların rengi başarıyla şu renge değiştirildi :",
+    "TEXT_TO_SPEECH_EMBED_TITLE" : "Ses Oynatılıyor"
 }
