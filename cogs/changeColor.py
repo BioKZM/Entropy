@@ -18,10 +18,10 @@ class ChangeColor(commands.Cog):
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
             language = data['language']
-            embedColor = int(data['embedColor'],16)        
 
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
             data['embedColor'] = f"0x{color}"
+            embedColor = int(data['embedColor'],16) 
             json.dump(data,file,indent=4)
 
         with open(f"localization/{language}.json") as file:
@@ -29,7 +29,7 @@ class ChangeColor(commands.Cog):
 
         embed = disnake.Embed(
             title = localization['COLOR_CHANGE_EMBED_TITLE'],
-            description = f"{localization['COLOR_CHANGE_EMBED_DESCRIPTION']} {embedColor}",
+            description = f"{localization['COLOR_CHANGE_EMBED_DESCRIPTION']} {color}",
             color = embedColor
         )
 
