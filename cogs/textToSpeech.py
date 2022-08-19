@@ -44,7 +44,7 @@ class TextToSpeech(commands.Cog):
             description = text,
             color = embedColor
         )
-        embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_name)
+        embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
 
         await inter.response.send_message(embed=embed)
 
@@ -81,7 +81,7 @@ class TextToSpeech(commands.Cog):
             description = text,
             color = embedColor
         )
-        embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_name)
+        embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
 
         await inter.response.send_message(embed=embed)
 
@@ -118,7 +118,7 @@ class TextToSpeech(commands.Cog):
             description = text,
             color = embedColor
         )
-        embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_name)
+        embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
 
         await inter.response.send_message(embed=embed)
 
@@ -155,7 +155,7 @@ class TextToSpeech(commands.Cog):
             description = text,
             color = embedColor
         )
-        embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_name)
+        embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
 
         await inter.response.send_message(embed=embed)
 
@@ -191,7 +191,7 @@ class TextToSpeech(commands.Cog):
             description = text,
             color = embedColor
         )
-        embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_name)
+        embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
 
         await inter.response.send_message(embed=embed)
         
@@ -228,7 +228,7 @@ class TextToSpeech(commands.Cog):
             description = text,
             color = embedColor
         )
-        embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_name)
+        embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
 
         await inter.response.send_message(embed=embed)
 
