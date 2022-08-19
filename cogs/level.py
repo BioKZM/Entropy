@@ -176,7 +176,7 @@ class Level(commands.Cog):
     @commands.slash_command(name = "level", description= "Bir kullanıcının seviyesini görüntülemek için kullan.")
     async def level(self,inter, kullanıcı : disnake.Member = None):
         
-        with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}") as file:
+        with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
             embedColor = data['embedColor']
             language = data['language']        
