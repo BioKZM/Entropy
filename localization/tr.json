@@ -30,5 +30,8 @@
     "SERVER_STATISTICS_DELETE_EMBED_DESCRIPTION" : "İstatistik sistemi silindi. Tekrardan kurmak için `/statistics setup` komutunu kullan.",
     "COLOR_CHANGE_EMBED_TITLE" : "Renk Değişimi",
     "COLOR_CHANGE_EMBED_DESCRIPTION" : "Gömülü mesajların rengi başarıyla şu renge değiştirildi :",
-    "TEXT_TO_SPEECH_EMBED_TITLE" : "Ses Oynatılıyor"
+    "TEXT_TO_SPEECH_EMBED_TITLE" : "Ses Oynatılıyor",
+    "LEVEL_ERROR_EMBED_TITLE" : "Hata!",
+    "LEVEL_ERROR_EMBED_DESCRIPTION" : "Aradığın kullanıcının dosyası bulunamadı.",
+    "LEVEL_UP_MESSAGE" : "Tebrikler {member.mention} Artık {level}. seviyesin!"
 }

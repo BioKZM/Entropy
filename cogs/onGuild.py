@@ -22,11 +22,14 @@ class GlobalServerCount(commands.Cog):
             os.mkdir(f"guilds/{guild.id}/options")
             os.mkdir(f"guilds/{guild.id}/levels")
             os.mkdir(f"guilds/{guild.id}/files/TTS")
+            os.mkdir(f"guilds/{guild.id}/files/images")
+
 
             with open(f"guilds/{guild.id}/options/{guild.id}.json","w") as file:
                 data = {
                     "language" : "en",
-                    "embedColor" : "0xCC0000"
+                    "embedColor" : "0xCC0000",
+                    "defaultChannel" : guild.system_channel.id
                 }
                 json.dump(data,file,indent=4)
 
