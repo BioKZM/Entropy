@@ -116,10 +116,10 @@ class LevelPNG(commands.Cog):
 
 
 
-    async def getRank(self):
+    def getRank(self):
         di = {}
         user = self.guild.get_member(self.userID)
-        async for member in self.guild.fetch_members(limit = None):
+        for member in self.guild.members:
             if member.id == 1009068314158432288:
                 pass
             else:
