@@ -228,7 +228,6 @@ class ChangeSettings(commands.Cog):
                 await inter.response.edit_message(embed=embed,view = MainView(timeout=None))
 
 
-
         class MainView(disnake.ui.View):
 
             
@@ -257,6 +256,19 @@ class ChangeSettings(commands.Cog):
                     color = embedColor
                 )
                 await inter.response.edit_message(embed=embed,view = EmbedColorView())
+
+            @disnake.ui.button(label=localization['SETTINGS_DEFAULT_CHANNEL_BUTTON_LABEL'])
+            async def defaultChannelButton(self,button:disnake.ui.Button,inter:disnake.Interaction):
+                with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
+                    data = json.load(file)
+                    embedColor = int(data['embed'],16)
+
+                embed = disnake.Embed(
+                    title = localization['SETTINGS_DEFAULT_CHANNEL_EMBED_TITLE'],
+                    description = localization['SETTINGS_DEFAULT_CHANNEL_EMBED_DESCRIPTION'],
+                    color = embedColor
+                )
+                await inter.response.edit_message(embed=embed,view=DefaultChannelView())
 
 
 

@@ -9,6 +9,9 @@
     "SETTINGS_BACK_BUTTON_LABEL" : "Geri",
     "SETTINGS_SELECT_EMBED_TITLE" : "Dil Değişikliği",
     "SETTINGS_SELECT_EMBED_DESCRIPTION" : "Entropy'nin dili başarıyla Türkçe'ye değiştirildi.",
+    "SETTINGS_DEFAULT_CHANNEL_BUTTON_LABEL" : "Varsayılan Kanalı Değiştir",
+    "SETTINGS_DEFAULT_CHANNEL_EMBED_TITLE" : "Kanal Değişikliği",
+    "SETTINGS_DEFAULT_CHANNEL_EMBED_DESCRIPTION" : "Tebrikler. Artık mesajlar {channel} kanalına gönderilecek",
     "COLOR_RED" : "Kırmızı",
     "COLOR_ORANGE" : "Turuncu",
     "COLOR_YELLOW" : "Sarı",
@@ -35,5 +38,5 @@
     "LEVEL_ERROR_EMBED_DESCRIPTION" : "Aradığın kullanıcının dosyası bulunamadı.",
     "LEVEL_UP_MESSAGE" : "Tebrikler {member} Artık {level}. seviyesin!",
     "ON_GUILD_JOIN_EMBED_TITLE" : "Tebrikler!",
-    "ON_GUILD_JOIN_EMBED_DESCRIPTION" : "Selamlar ve beni sunucuna davet ettiğin için teşekkürler.\n\nEntropy'nin birçok ve kapsamlı ayarı bulunmaktadır ama sana en temel olan seviye sisteminden bahsetmeme izin ver. Şu anda sunucuda bulunan metin kanallarına atılan her mesajda kullanıcılar rastgele tecrübe puanı kazanmakta. Seviye atlama mesajları ise {systemChannel} kanalına gönderilmekte.\n\nEğer bu durumda hoşnut değilsen, `/settings` komutunu kullanarak varsayılan mesaj kanalını değiştir. Ayrıca komutları ve ne yaptıklarını öğrenmek için `/help` komutunu kullanabilirsin.\n\nBu durumlar dışında anlamadığın bir durum olursa `/help` komutunun altındaki buton ile destek sunucumu ziyaret edebilirsin.\n\nTekrardan teşekkürler ve iyi eğlenceler."
+    "ON_GUILD_JOIN_EMBED_DESCRIPTION" : "Selamlar ve beni sunucuna davet ettiğin için teşekkürler.\n\nEntropy'nin birçok ve kapsamlı ayarı bulunmaktadır ama sana en temel olan seviye sisteminden bahsetmeme izin ver.\nŞu anda sunucuda bulunan metin kanallarına atılan her mesajda kullanıcılar rastgele tecrübe puanı kazanmakta. Seviye atlama mesajları ise {systemChannel} kanalına gönderilmekte.\n\nEğer bu durumdan hoşnut değilsen, `/default channel` komutunu kullanarak varsayılan mesaj kanalını değiştir. Ayrıca diğer komutları ve ne yaptıklarını öğrenmek için `/help` komutunu kullanabilirsin.\n\nBu durumlar dışında anlamadığın bir durum olursa `/help` komutunun altındaki buton ile destek sunucumu ziyaret edebilirsin.\n\nTekrardan teşekkürler ve iyi eğlenceler."
 }
