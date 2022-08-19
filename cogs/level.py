@@ -45,7 +45,7 @@ class LevelPNG(commands.Cog):
         size = 75
         discriminatorSize = 45
         
-        nick = ImageFont.truetype("files/-fonts/PrimaSansBT-Roman.otf", size=size)
+        nick = ImageFont.truetype("files/fonts/PrimaSansBT-Roman.otf", size=size)
         nickWidth = nick.getsize(nickname)
         nicknameLength= len(nickname)
         
