@@ -18,13 +18,13 @@ class LevelPNG(commands.Cog):
         opener.addheaders=[('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1941.0 Safari/537.36')]
         urllib.request.install_opener(opener)
         # filename = f"Levels/{user.id}.png"
-        filename = f"guilds/{self.guildID}/files/images/{self.userID}.png"
+        filename = f"guilds/{self.guild.id}/files/images/{self.userID}.png"
         url = user.display_avatar.url
         urllib.request.urlretrieve(str(url),filename)
         self.__makeRound()
 
     def makeImage(self):
-        with open(f"guilds/{self.guildID}/levels/{self.userID}.json") as file:
+        with open(f"guilds/{self.guild.id}/levels/{self.userID}.json") as file:
             data = json.load(file)
         user = self.guild.get_member(self.userID)
         color = user.top_role.color
@@ -107,11 +107,11 @@ class LevelPNG(commands.Cog):
         text.text((670,180),text=f"XP",font=XP,fill=(255,255,255))
         text.text((715,164),text=f"{XP_}",font=xpNumber,fill=color)
 
-        image.save(f"guilds/{self.guildID}/files/images/{self.userID}.png",quality=100)
+        image.save(f"guilds/{self.guild.id}/files/images/{self.userID}.png",quality=100)
         border = Image.new("RGB",(1000,346),color=(37,37,37))
         rectangle = ImageDraw.Draw(border)
         border.paste(image,(34,34))
-        border.save(f"guilds/{self.guildID}/files/images/{self.userID}.png")
+        border.save(f"guilds/{self.guild.id}/files/images/{self.userID}.png")
         self.__finalize()
 
 
@@ -123,7 +123,7 @@ class LevelPNG(commands.Cog):
             if member.id == 1009068314158432288:
                 pass
             else:
-                with open(f"guilds/{self.guildID}/levels/{member.id}.json") as file:
+                with open(f"guilds/{self.guild.id}/levels/{member.id}.json") as file:
                     data = json.load(file)
                 XP = data['XP']
                 di[member.name] = int(XP)
@@ -138,18 +138,18 @@ class LevelPNG(commands.Cog):
         draw = ImageDraw.Draw(self.mask) 
         draw.ellipse((0, 0) + size, fill=255)
         
-        image = Image.open(f"guilds/{self.guildID}/files/images/{self.userID}.png")
+        image = Image.open(f"guilds/{self.guild.id}/files/images/{self.userID}.png")
         self.output = ImageOps.fit(image, self.mask.size, centering=(0.5, 0.5))
         self.output.putalpha(self.mask)
-        os.remove(f"guilds/{self.guildID}/files/images/{self.userID}.png")
-        self.output.save(f"guilds/{self.guildID}/files/images/{self.userID}.png")
+        os.remove(f"guilds/{self.guild.id}/files/images/{self.userID}.png")
+        self.output.save(f"guilds/{self.guild.id}/files/images/{self.userID}.png")
         self.makeImage()
         
         
 
 
     def __finalize(self):
-        image = Image.open(f"guilds/{self.guildID}/files/images/{self.userID}.png")
+        image = Image.open(f"guilds/{self.guild.id}/files/images/{self.userID}.png")
         rad = 20
         circle = Image.new('L', (rad * 2, rad * 2), 0)
         draw = ImageDraw.Draw(circle)
@@ -162,8 +162,8 @@ class LevelPNG(commands.Cog):
         alpha.paste(circle.crop((rad, rad, rad * 2, rad * 2)), (w - rad, h - rad))
         image.putalpha(alpha)
         
-        self.im = Image.open(f"guilds/{self.guildID}/files/images/{self.userID}.png")
-        self.im.save(f"guilds/{self.guildID}/files/images/{self.userID}.png")
+        self.im = Image.open(f"guilds/{self.guild.id}/files/images/{self.userID}.png")
+        self.im.save(f"guilds/{self.guild.id}/files/images/{self.userID}.png")
 
 
 
@@ -193,7 +193,7 @@ class Level(commands.Cog):
         file_there = os.path.isfile(f"guilds/{inter.guild.id}/levels/{user.id}.json")
         if file_there:
             LevelPNG(user.id,inter.guild.id)
-            file = disnake.File(f"guilds/{self.guildID}/files/images/{self.userID}.png",filename= "image.png")
+            file = disnake.File(f"guilds/{self.guild.id}/files/images/{self.userID}.png",filename= "image.png")
             await inter.response.send_message(file=file)
 
         else:
