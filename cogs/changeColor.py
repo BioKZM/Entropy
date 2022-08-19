@@ -17,7 +17,7 @@ class ChangeColor(commands.Cog):
     async def changeColor(self,inter,color):
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
-            language = data['lang']
+            language = data['language']
             embedColor = int(data['embedColor'],16)        
 
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:

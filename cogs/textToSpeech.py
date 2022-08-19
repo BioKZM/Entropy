@@ -23,7 +23,7 @@ class TextToSpeech(commands.Cog):
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
             embedColor = int(data['embedColor'],16)
-            lang = data['lang']
+            lang = data['language']
 
         with open(f"localization/{lang}.json") as file:
             localization = json.load(file)
@@ -60,7 +60,7 @@ class TextToSpeech(commands.Cog):
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
             embedColor = int(data['embedColor'],16)
-            lang = data['lang']
+            lang = data['language']
 
         with open(f"localization/{lang}.json") as file:
             localization = json.load(file)
@@ -97,7 +97,7 @@ class TextToSpeech(commands.Cog):
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
             embedColor = int(data['embedColor'],16)
-            lang = data['lang']
+            lang = data['language']
 
         with open(f"localization/{lang}.json") as file:
             localization = json.load(file)
@@ -134,7 +134,7 @@ class TextToSpeech(commands.Cog):
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
             embedColor = int(data['embedColor'],16)
-            lang = data['lang']
+            lang = data['language']
 
         with open(f"localization/{lang}.json") as file:
             localization = json.load(file)
@@ -170,7 +170,7 @@ class TextToSpeech(commands.Cog):
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
             embedColor = int(data['embedColor'],16)
-            lang = data['lang']
+            lang = data['language']
 
         with open(f"localization/{lang}.json") as file:
             localization = json.load(file)
@@ -207,7 +207,7 @@ class TextToSpeech(commands.Cog):
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
             embedColor = int(data['embedColor'],16)
-            lang = data['lang']
+            lang = data['language']
 
         with open(f"localization/{lang}.json") as file:
             localization = json.load(file)
@@ -243,7 +243,7 @@ class TextToSpeech(commands.Cog):
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
             embedColor = int(data['embedColor'],16)
-            lang = data['lang']
+            lang = data['language']
 
         with open(f"localization/{lang}.json") as file:
             localization = json.load(file)
