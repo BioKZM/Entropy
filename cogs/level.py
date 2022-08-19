@@ -120,9 +120,7 @@ class LevelPNG(commands.Cog):
         di = {}
         user = self.guild.get_member(self.userID)
         for member in self.guild.members:
-            if member.id == 1009068314158432288:
-                pass
-            else:
+            if not member.bot:
                 with open(f"guilds/{self.guild.id}/levels/{member.id}.json") as file:
                     data = json.load(file)
                 XP = data['XP']
