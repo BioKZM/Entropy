@@ -191,7 +191,7 @@ class Level(commands.Cog):
         file_there = os.path.isfile(f"guilds/{inter.guild.id}/levels/{user.id}.json")
         if file_there:
             LevelPNG(user.id,inter.guild.id)
-            file = disnake.File(f"guilds/{self.guild.id}/files/images/{self.userID}.png",filename= "image.png")
+            file = disnake.File(f"guilds/{inter.guild.id}/files/images/{kullanıcı.id}.png",filename= "image.png")
             await inter.response.send_message(file=file)
 
         else:
