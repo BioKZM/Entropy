@@ -57,7 +57,7 @@ class GlobalServerCount(commands.Cog):
 
         with open(f"guilds/{guild.id}/options/{guild.id}.json") as file:
             data = json.load(file)
-            embedColor = int(data['embedColor'])
+            embedColor = int(data['embedColor'],16)
             language = data['language']
 
         with open(f"localization/{language}.json") as file:
