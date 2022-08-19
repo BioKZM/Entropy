@@ -19,7 +19,7 @@ async def language(ctx):
     channel = client.get_channel(1009068358869717034)
     await channel.send(ctx.guild.preferred_locale)
 
-extensions = ["cogs.avatar","cogs.settings","cogs.onGuild","cogs.memberCount","cogs.changeColor","cogs.onMemberJoin","cogs.memberCountLoop","cogs.textToSpeech.py"]
+extensions = ["cogs.avatar","cogs.settings","cogs.onGuild","cogs.memberCount","cogs.changeColor","cogs.onMemberJoin","cogs.memberCountLoop","cogs.textToSpeech"]
 
 for extension in extensions:
     client.load_extension(extension)
