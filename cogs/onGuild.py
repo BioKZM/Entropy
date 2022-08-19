@@ -65,7 +65,7 @@ class GlobalServerCount(commands.Cog):
 
         embed = disnake.Embed(
             title = f"{localization['ON_GUILD_JOIN_EMBED_TITLE']}",
-            description = f"{localization['ON_GUILD_JOIN_EMBED_DESCRIPTION']}",
+            description = f"{localization['ON_GUILD_JOIN_EMBED_DESCRIPTION'].format(systemChannel = systemChannel.name)}",
             color = embedColor
         )
         await systemChannel.send(embed=embed)
