@@ -16,6 +16,10 @@ class GlobalServerCount(commands.Cog):
         await channel.send(f"**{guild}** sunucusuna davet edildim.")
         channel = self.client.get_channel(1009434779508281385)
         await channel.edit(name = f"Mevcut Sunucular : {len(self.client.guilds)}")
+        systemChannel = guild.system_channel
+        if systemChannel == None:
+            list = guild.channels
+            systemChannel = list[0] if channel.type == disnake.ChannelType.text else ""
 
         try:
             os.mkdir(f"guilds/{guild.id}")
@@ -29,7 +33,7 @@ class GlobalServerCount(commands.Cog):
                 data = {
                     "language" : "en",
                     "embedColor" : "0xCC0000",
-                    "defaultChannel" : guild.system_channel.id
+                    "defaultChannel" : systemChannel
                 }
                 json.dump(data,file,indent=4)
 
