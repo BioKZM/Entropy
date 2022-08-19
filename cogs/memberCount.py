@@ -1,4 +1,3 @@
-from turtle import position
 import disnake
 import json
 import asyncio
