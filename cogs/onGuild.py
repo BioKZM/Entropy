@@ -64,8 +64,8 @@ class GlobalServerCount(commands.Cog):
             localization = json.load(file)
 
         embed = disnake.Embed(
-            title = localization['ON_GUILD_JOIN_EMBED_TITLE'],
-            description = localization['ON_GUILD_JOIN_EMBED_DESCRIPTION'],
+            title = f"{localization['ON_GUILD_JOIN_EMBED_TITLE']}",
+            description = f"{localization['ON_GUILD_JOIN_EMBED_DESCRIPTION']}",
             color = embedColor
         )
         await systemChannel.send(embed=embed)
