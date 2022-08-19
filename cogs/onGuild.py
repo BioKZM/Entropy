@@ -25,6 +25,7 @@ class GlobalServerCount(commands.Cog):
             os.mkdir(f"guilds/{guild.id}")
             os.mkdir(f"guilds/{guild.id}/options")
             os.mkdir(f"guilds/{guild.id}/levels")
+            os.mkdir(f"guilds/{guild.id}/files")
             os.mkdir(f"guilds/{guild.id}/files/TTS")
             os.mkdir(f"guilds/{guild.id}/files/images")
 
@@ -49,6 +50,7 @@ class GlobalServerCount(commands.Cog):
                         "XPdiv" : 10
                     }
                     json.dump(data,file,indent=4)
+
         except Exception as err:
             channel = self.client.get_channel(1009425217669582969)
             await channel.send(f"**{guild}** sunucusunun dosyaları oluşturulamadı! Hata kodu : ```{err}```")
