@@ -36,5 +36,4 @@
     "LEVEL_UP_MESSAGE" : "Tebrikler {member.mention} Artık {level}. seviyesin!",
     "ON_GUILD_JOIN_EMBED_TITLE" : "Tebrikler!",
     "ON_GUILD_JOIN_EMBED_DESCRIPTION" : "Selamlar ve beni sunucuna davet ettiğin için teşekkürler.\n Sunucunun temel ayarlarını yapmak için lütfen `/settings` komutunu kullanmayı unutma.\n Şu anda sistem mesajları ve seviye atlama mesajları {systemChannel} kanalına gönderiliyor."
-    
 }
