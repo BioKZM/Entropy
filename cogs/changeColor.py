@@ -9,7 +9,7 @@ class ChangeColor(commands.Cog):
         self.client = client
 
 
-    @commands.slash_commmand(name = "change")
+    @commands.slash_command(name = "change")
     async def change(self,inter):
         pass
 
