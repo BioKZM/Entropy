@@ -22,3 +22,5 @@ class OnMemberJoin(commands.Cog):
                     }
             json.dump(data,file,indent=4)
 
+def setup(client):
+    client.add_cog(OnMemberJoin(client))
