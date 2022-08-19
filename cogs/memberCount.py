@@ -61,13 +61,8 @@ class MemberCount(commands.Cog):
             voiceChannelID = data['voiceChannelID']
 
 
-        if lang == "tr":
-            with open(f"localization/tr.json") as file:
-                localization = json.load(file)
-
-        elif lang == "en":
-            with open(f"localization/en.json") as file:
-                localization = json.load(file) 
+        with open(f"localization/{lang}.json") as file:
+            localization = json.load(file) 
 
         categoryChannel = inter.guild.get_channel(int(categoryID))
         voiceChannel = inter.guild.get_channel(int(voiceChannelID))
