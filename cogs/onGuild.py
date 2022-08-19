@@ -53,14 +53,14 @@ class GlobalServerCount(commands.Cog):
             channel = self.client.get_channel(1009425217669582969)
             await channel.send(f"**{guild}** sunucusunun dosyaları oluşturulamadı! Hata kodu : ```{err}```")
 
-        with open(f"guilds/{guild.id}/options/{guild.id}") as file:
+        with open(f"guilds/{guild.id}/options/{guild.id}.json") as file:
             data = json.load(file)
             embedColor = int(data['embedColor'])
             language = data['language']
 
         with open(f"localization/{language}.json") as file:
             localization = json.load(file)
-            
+
         embed = disnake.Embed(
             title = localization['ON_GUILD_JOIN_EMBED_TITLE'],
             description = localization['ON_GUILD_JOIN_EMBED_DESCRIPTION'],
