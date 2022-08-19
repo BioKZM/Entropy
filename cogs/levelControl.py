@@ -59,7 +59,7 @@ class levelControl(commands.Cog):
 								with open(f"guilds/localization/{language}.json") as file:
 									localization = json.load(file)
 
-								await textchannel.send(f"{localization['LEVEL_UP_MESSAGE']}")
+								await textchannel.send(f"{localization['LEVEL_UP_MESSAGE'].format(member=member.mention,level = level)}")
 
 							
 								
