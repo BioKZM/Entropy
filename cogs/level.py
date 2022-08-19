@@ -178,7 +178,7 @@ class Level(commands.Cog):
         
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
-            embedColor = data['embedColor']
+            embedColor = int(data['embedColor'],16)
             language = data['language']        
 
 
