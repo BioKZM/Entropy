@@ -1,4 +1,5 @@
 import disnake
+import json
 from disnake.ext import commands
 
 class ChangeDefaultChannel(commands.Cog):
@@ -16,5 +17,22 @@ class ChangeDefaultChannel(commands.Cog):
         ----------
         channel: Select a text channel.
         """
-        pass
+        with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
+            data = json.load(file)
+            embedColor = int(data['embedColor'],16)
+            language = data['language']
+
+        with open(f"localization/{language}.json") as file:
+            localization = json.load(file)
+
+        with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json","w") as file:
+            data['defaultChannel'] = channel.id
+            json.dump(data,file,indent=4)
+        
+        embed = disnake.Embed(
+            title = localization['CHANGE_DEFAULT_CHANNEL_EMBED_TITLE'],
+            description = localization['CHANGE_DEFAULT_CHANNEL_EMBED_DESCRIPTION'].format(channel = channel.mention),
+            color = embedColor
+        )
+        await inter.response.send_message(embed=embed,ephemeral=True)
     
