@@ -36,3 +36,5 @@ class ChangeDefaultChannel(commands.Cog):
         )
         await inter.response.send_message(embed=embed,ephemeral=True)
     
+def setup(client):
+    client.add_cog(ChangeDefaultChannel(client))
