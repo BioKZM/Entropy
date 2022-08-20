@@ -34,7 +34,7 @@ class GlobalServerCount(commands.Cog):
                 data = {
                     "language" : "en",
                     "embedColor" : "0xCC0000",
-                    "defaultChannel" : systemChannel.name
+                    "defaultChannel" : systemChannel.id
                 }
                 json.dump(data,file,indent=4)
 
