@@ -2,6 +2,7 @@ import disnake
 import json
 import shutil
 import os
+from datetime import datetime 
 from disnake.ext import commands
 class GlobalServerCount(commands.Cog):
     def __init__(self, client):
