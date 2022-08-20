@@ -10,8 +10,7 @@ client = commands.Bot(command_prefix="!",intents = disnake.Intents.all(), help_c
 
 @client.event
 async def on_ready():
-    print("Entropy is ready!")
-    print(client.user)
+    print(f"{client.user} is ready!")
     await client.change_presence(status = disnake.Status.online,activity = disnake.Game("Creating Chaos..."))
 
 
