@@ -11,7 +11,7 @@ class ChangeDefaultChannel(commands.Cog):
         pass
 
     @default.sub_command(name = "channel",description = "Change default channel for leveling messages.")
-    async def changeDefaultChannel(self,inter,channel:disnake.Channel):
+    async def changeDefaultChannel(self,inter,channel:disnake.TextChannel):
         """
         Parameters
         ----------
