@@ -1,6 +1,6 @@
-from threading import local
 import disnake
 import json
+from datetime import datetime
 from disnake.ext import commands
 
 class Avatar(commands.Cog):
@@ -31,6 +31,8 @@ class Avatar(commands.Cog):
                     description = "\n",
                 )
                 embed.set_image(url=member.avatar.url)
+                embed.set_footer(text="Entropy",icon_url = inter.client.user.avatar)
+                embed.timestamp = datetime.now()
                 
                 await inter.response.edit_message(embed=embed,view=DisplayView(timeout=None))
 
