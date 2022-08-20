@@ -16,7 +16,7 @@ class ChangeSettings(commands.Cog):
 
         with open(f"guilds/{inter.guild.id}/options/{inter.guild.id}.json") as file:
             data = json.load(file)
-            lang = data['language']
+            language = data['language']
             embedColor = int(data['embedColor'],16)
 
         with open(f"localization/{language}.json") as file:
