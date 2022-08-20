@@ -68,6 +68,8 @@ class GlobalServerCount(commands.Cog):
             description = f"{localization['ON_GUILD_JOIN_EMBED_DESCRIPTION'].format(systemChannel = systemChannel.mention)}",
             color = embedColor
         )
+        embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+        embed.timestamp = datetime.now()
         await systemChannel.send(embed=embed)
 
     @commands.Cog.listener()

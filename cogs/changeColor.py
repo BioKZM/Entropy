@@ -1,5 +1,6 @@
 import disnake
 import json
+from datetime import datetime 
 from disnake.ext import commands
 
 
@@ -32,6 +33,8 @@ class ChangeColor(commands.Cog):
             description = f"{localization['COLOR_CHANGE_EMBED_DESCRIPTION']} {color}",
             color = embedColor
         )
+        embed.set_footer(text = "Entropy", icon_url =inter.client.user.display_avatar.url)
+        embed.timestamp = datetime.now()
 
         await inter.response.send_message(embed=embed,ephemeral=True)
 

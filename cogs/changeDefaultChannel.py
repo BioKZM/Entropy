@@ -1,5 +1,6 @@
 import disnake
 import json
+from datetime import datetime 
 from disnake.ext import commands
 
 class ChangeDefaultChannel(commands.Cog):
@@ -34,6 +35,8 @@ class ChangeDefaultChannel(commands.Cog):
             description = localization['CHANGE_DEFAULT_CHANNEL_EMBED_DESCRIPTION'].format(channel = channel.mention),
             color = embedColor
         )
+        embed.set_footer(text = "Entropy", icon_url = inter.client.display_avatar.url)
+        embed.timestamp = datetime.now()
         await inter.response.send_message(embed=embed,ephemeral=True)
     
 def setup(client):

@@ -46,6 +46,8 @@ class MemberCount(commands.Cog):
             description = localization['SERVER_STATISTICS_SETUP_EMBED_DESCRIPTION'],
             color = embedColor
         )
+        embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+        embed.timestamp = datetime.now()
         await inter.response.send_message(embed=embed,ephemeral=True)
 
         

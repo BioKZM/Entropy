@@ -45,6 +45,8 @@ class TextToSpeech(commands.Cog):
             color = embedColor
         )
         embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
+        embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+        embed.timestamp = datetime.now()
 
         await inter.response.send_message(embed=embed)
 
@@ -82,6 +84,8 @@ class TextToSpeech(commands.Cog):
             color = embedColor
         )
         embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
+        embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+        embed.timestamp = datetime.now()
 
         await inter.response.send_message(embed=embed)
 
@@ -119,6 +123,8 @@ class TextToSpeech(commands.Cog):
             color = embedColor
         )
         embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
+        embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+        embed.timestamp = datetime.now()
 
         await inter.response.send_message(embed=embed)
 
@@ -156,6 +162,8 @@ class TextToSpeech(commands.Cog):
             color = embedColor
         )
         embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
+        embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+        embed.timestamp = datetime.now()
 
         await inter.response.send_message(embed=embed)
 
@@ -192,6 +200,8 @@ class TextToSpeech(commands.Cog):
             color = embedColor
         )
         embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
+        embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+        embed.timestamp = datetime.now()
 
         await inter.response.send_message(embed=embed)
         
@@ -229,6 +239,8 @@ class TextToSpeech(commands.Cog):
             color = embedColor
         )
         embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
+        embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+        embed.timestamp = datetime.now()
 
         await inter.response.send_message(embed=embed)
 
@@ -265,6 +277,8 @@ class TextToSpeech(commands.Cog):
             color = embedColor
         )
         embed.set_author(name = inter.author.display_name, icon_url = inter.author.display_avatar.url)
+        embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+        embed.timestamp = datetime.now()
 
         await inter.response.send_message(embed=embed)
 

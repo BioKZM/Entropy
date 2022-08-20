@@ -19,12 +19,8 @@ class ChangeSettings(commands.Cog):
             lang = data['language']
             embedColor = int(data['embedColor'],16)
 
-        if lang == "tr":
-            with open(f"localization/tr.json") as file:
-                localization = json.load(file)
-        else:
-            with open(f"localization/en.json") as file:
-                localization = json.load(file)
+        with open(f"localization/{language}.json") as file:
+            localization = json.load(file)
 
         class LanguageView(disnake.ui.View):
             
@@ -54,6 +50,8 @@ class ChangeSettings(commands.Cog):
                         description = localization['SETTINGS_SELECT_EMBED_DESCRIPTION'],
                         color = embedColor
                     )
+                    embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                    embed.timestamp = datetime.now()
                     await inter.response.send_message(embed=embed,ephemeral=True)
                 
                 if select.values == ["en"]:
@@ -71,7 +69,8 @@ class ChangeSettings(commands.Cog):
                         title = localization['SETTINGS_SELECT_EMBED_TITLE'],
                         description = localization['SETTINGS_SELECT_EMBED_DESCRIPTION']
                     )
-                
+                    embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                    embed.timestamp = datetime.now()
                     await inter.response.send_message(embed=embed,ephemeral=True)
 
             @disnake.ui.button(label = localization['SETTINGS_BACK_BUTTON_LABEL'])
@@ -85,6 +84,8 @@ class ChangeSettings(commands.Cog):
                     description = localization['SETTINGS_EMBED_DESCRIPTION'],
                     color = embedColor
                 )
+                embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                embed.timestamp = datetime.now()
                 await inter.response.edit_message(view = MainView(timeout=None))
 
         class EmbedColorView(disnake.ui.View):
@@ -116,6 +117,8 @@ class ChangeSettings(commands.Cog):
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_RED']}",
                         color = embedColor,
                     )
+                    embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                    embed.timestamp = datetime.now()
                     await inter.response.send_message(embed=embed,ephemeral=True)
 
                 elif select.values == ["orange"]:
@@ -128,6 +131,8 @@ class ChangeSettings(commands.Cog):
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_ORANGE']}",
                         color = embedColor,
                     )
+                    embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                    embed.timestamp = datetime.now()
                     await inter.response.send_message(embed=embed,ephemeral=True)
 
                 elif select.values == ["yellow"]:
@@ -140,6 +145,8 @@ class ChangeSettings(commands.Cog):
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_YELLOW']}",
                         color = embedColor,
                     )
+                    embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                    embed.timestamp = datetime.now()
                     await inter.response.send_message(embed=embed,ephemeral=True)
 
                 elif select.values == ["green"]:
@@ -152,6 +159,7 @@ class ChangeSettings(commands.Cog):
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_GREEN']}",
                         color = embedColor,
                     )
+                    
                     await inter.response.send_message(embed=embed,ephemeral=True)
 
                 elif select.values == ["blue"]:
@@ -164,6 +172,8 @@ class ChangeSettings(commands.Cog):
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_BLUE']}",
                         color = embedColor,
                     )
+                    embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                    embed.timestamp = datetime.now()
                     await inter.response.send_message(embed=embed,ephemeral=True)
 
                 elif select.values == ["purple"]:
@@ -176,6 +186,8 @@ class ChangeSettings(commands.Cog):
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_PURPLE']}",
                         color = embedColor,
                     )
+                    embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                    embed.timestamp = datetime.now()
                     await inter.response.send_message(embed=embed,ephemeral=True)
 
                 elif select.values == ["brown"]:
@@ -188,6 +200,8 @@ class ChangeSettings(commands.Cog):
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_BROWN']}",
                         color = embedColor,
                     )
+                    embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                    embed.timestamp = datetime.now()
                     await inter.response.send_message(embed=embed,ephemeral=True)
 
                 elif select.values == ["black"]:
@@ -200,6 +214,8 @@ class ChangeSettings(commands.Cog):
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_BLACK']}",
                         color = embedColor,
                     )
+                    embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                    embed.timestamp = datetime.now()
                     await inter.response.send_message(embed=embed,ephemeral=True)
 
                 elif select.values == ["white"]:
@@ -212,6 +228,8 @@ class ChangeSettings(commands.Cog):
                         description = f"{localization['SETTINGS_EMBED_COLOR_CHANGE_EMBED_DESCRIPTION']} {localization['COLOR_WHITE']}",
                         color = embedColor,
                     )
+                    embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                    embed.timestamp = datetime.now()
                     await inter.response.send_message(embed=embed,ephemeral=True)
                 
             @disnake.ui.button(label = localization['SETTINGS_BACK_BUTTON_LABEL'])
@@ -225,6 +243,8 @@ class ChangeSettings(commands.Cog):
                     description = localization['SETTINGS_EMBED_DESCRIPTION'],
                     color = embedColor
                 )
+                embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                embed.timestamp = datetime.now()
                 await inter.response.edit_message(embed=embed,view = MainView(timeout=None))
 
 
@@ -242,6 +262,8 @@ class ChangeSettings(commands.Cog):
                     description = localization['SETTINGS_LANGUAGE_EMBED_DESCRIPTION'],
                     color = embedColor
                 )
+                embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                embed.timestamp = datetime.now()
                 
                 await inter.response.edit_message(embed=embed,view = LanguageView())
             @disnake.ui.button(label=localization['SETTINGS_EMBED_COLOR_BUTTON_LABEL'])
@@ -255,6 +277,8 @@ class ChangeSettings(commands.Cog):
                     description = localization['SETTINGS_EMBED_COLOR_EMBED_DESCRIPTION'],
                     color = embedColor
                 )
+                embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                embed.timestamp = datetime.now()
                 await inter.response.edit_message(embed=embed,view = EmbedColorView())
 
             @disnake.ui.button(label=localization['SETTINGS_DEFAULT_CHANNEL_BUTTON_LABEL'])
@@ -268,6 +292,8 @@ class ChangeSettings(commands.Cog):
                     description = localization['SETTINGS_DEFAULT_CHANNEL_EMBED_DESCRIPTION'],
                     color = embedColor
                 )
+                embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+                embed.timestamp = datetime.now()
                 await inter.response.edit_message(embed=embed,view=DefaultChannelView())
 
 
@@ -277,6 +303,8 @@ class ChangeSettings(commands.Cog):
             description = localization['SETTINGS_EMBED_DESCRIPTION'],
             color = embedColor
         )
+        embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+        embed.timestamp = datetime.now()
         await inter.response.send_message(embed=embed,view=MainView())
 
 

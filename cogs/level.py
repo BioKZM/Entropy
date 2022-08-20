@@ -200,6 +200,8 @@ class Level(commands.Cog):
                 description = localization['LEVEL_ERROR_EMBED_DESCRIPTION'],
                 color = embedColor
             )
+            embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+            embed.timestamp = datetime.now()
             await inter.response.send_message(embed=embed,ephemeral=True)
         
 
