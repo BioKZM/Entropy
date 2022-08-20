@@ -32,7 +32,7 @@ class Avatar(commands.Cog):
                     description = "\n",
                 )
                 embed.set_image(url=member.avatar.url)
-                embed.set_footer(text="Entropy",icon_url = inter.client.user.avatar.url)
+                embed.set_footer(text="Entropy",icon_url = inter.bot.user.avatar.url)
                 embed.timestamp = datetime.now()
                 
                 await inter.response.edit_message(embed=embed,view=DisplayView(timeout=None))
@@ -46,7 +46,7 @@ class Avatar(commands.Cog):
                     description = "\n",
                 )
                 embed.set_image(url=member.display_avatar.url)
-                embed.set_footer(text="Entropy",icon_url = inter.client.user.avatar.url)
+                embed.set_footer(text="Entropy",icon_url = inter.bot.user.avatar.url)
                 embed.timestamp = datetime.now()
                 await inter.response.edit_message(embed=embed,view=GlobalView(timeout=None))
 
@@ -56,7 +56,7 @@ class Avatar(commands.Cog):
             description = "\n",
         )
         embed.set_image(url=member.display_avatar.url)
-        embed.set_footer(text="Entropy",icon_url = inter.client.user.avatar.url)
+        embed.set_footer(text="Entropy",icon_url = inter.bot.user.avatar.url)
         embed.timestamp = datetime.now()
 
         await inter.response.send_message(embed=embed,view=GlobalView(timeout=None))
