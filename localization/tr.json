@@ -55,6 +55,6 @@
     "HELP_EMBED_ADD_FIELD_SETTINGS_TITLE" : "Ayarlar",
     "HELP_EMBED_ADD_FIELD_SETTINGS_VALUE" : "`/help`\n`/settings`",
     "HELP_EMBED_ADD_FIELD_SOUND_TITLE" : "Ses",
-    "HELP_EMBED_ADD_FIELD_SOUND_VALUE" : "`/soundboard`\n\u200B`-en`\n\u200B`-tr`"
+    "HELP_EMBED_ADD_FIELD_SOUND_VALUE" : "`/soundboard`\n   `-en`\n  `-tr`"
 
 }
