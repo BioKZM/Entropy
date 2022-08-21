@@ -47,5 +47,12 @@
     "SOUNDBOARD_PRESETS_EMBED_DESCRIPTION" : "Mevcut slotların aşağıdaki gibidir: ",
     "SOUNDBOARD_PLAY_EMBED_TITLE" : "Ses Parçası Başarıyla Çalındı!",
     "SOUNDBOARD_PLAY_ADD_FIELD_TITLE" : "Başlık",
-    "SOUNDBOARD_PLAY_ADD_FIELD_LINK" : "Link"
+    "SOUNDBOARD_PLAY_ADD_FIELD_LINK" : "Link",
+    "HELP_EMBED_ADD_FIELD_PERSONAL_TITLE" : "Kişisel",
+    "HELP_EMBED_ADD_FIELD_PERSONAL_VALUE" : "`/avatar`\n`/level`",
+    "HELP_EMBED_ADD_FIELD_SETTINGS_TITLE" : "Ayarlar",
+    "HELP_EMBED_ADD_FIELD_SETTINGS_VALUE" : "`/help`\n`/settings`",
+    "HELP_EMBED_ADD_FIELD_SOUND_TITLE" : "Ses",
+    "HELP_EMBED_ADD_FIELD_SOUND_VALUE" : "`/soundboard`\n\t-en\n\t-tr"
+
 }
