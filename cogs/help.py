@@ -1,7 +1,6 @@
 import disnake
 import json
-from disnake.ext import command
-
+from disnake.ext import commands
 
 class Help(commands.Cog):
     def __init__(self,client):
