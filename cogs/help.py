@@ -19,8 +19,8 @@ class Help(commands.Cog):
             localization = json.load(file)
 
         embed = disnake.Embed(
-            title = localization[''],
-            description = localization[''],
+            title = localization['HELP_EMBED_TITLE'],
+            description = localization['HELP_EMBED_DESCRIPTION'],
             color = embedColor
         )
         embed.add_field(name = localization['HELP_EMBED_ADD_FIELD_SOUND_TITLE'],value = localization['HELP_EMBED_ADD_FIELD_SOUND_VALUE'])
