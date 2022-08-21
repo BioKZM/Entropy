@@ -29,6 +29,7 @@ class GlobalServerCount(commands.Cog):
             os.mkdir(f"guilds/{guild.id}/files")
             os.mkdir(f"guilds/{guild.id}/files/TTS")
             os.mkdir(f"guilds/{guild.id}/files/images")
+            os.mkdir(f"guilds/{guild.id}/files/presets")
 
 
             with open(f"guilds/{guild.id}/options/{guild.id}.json","w") as file:
@@ -51,6 +52,20 @@ class GlobalServerCount(commands.Cog):
                         "XPdiv" : 10
                     }
                     json.dump(data,file,indent=4)
+                with open(f"guilds/{guild.id}/files/presets/{member.id}.json","w") as file:
+                    data = {
+                        "slot_1": None,
+                        "slot_2": None,
+                        "slot_3": None,
+                        "slot_4": None,
+                        "slot_5": None,
+                        "slot_6": None,
+                        "slot_7": None,
+                        "slot_8": None,
+                        "slot_9": None,
+                        "slot_10": None
+                    }
+                    json.dump(data,file,indent=4)
 
         except Exception as err:
             channel = self.client.get_channel(1009425217669582969)
@@ -69,7 +84,7 @@ class GlobalServerCount(commands.Cog):
             description = f"{localization['ON_GUILD_JOIN_EMBED_DESCRIPTION'].format(systemChannel = systemChannel.mention)}",
             color = embedColor
         )
-        embed.set_footer(text="Entropy", icon_url = inter.client.user.display_avatar.url )
+        embed.set_footer(text="Entropy", icon_url = guild.me.display_avatar.url)
         embed.timestamp = datetime.now()
         await systemChannel.send(embed=embed)
 
