@@ -53,8 +53,17 @@
     "HELP_EMBED_ADD_FIELD_PERSONAL_TITLE" : "Kişisel",
     "HELP_EMBED_ADD_FIELD_PERSONAL_VALUE" : "`/avatar`\n`/level`",
     "HELP_EMBED_ADD_FIELD_SETTINGS_TITLE" : "Ayarlar",
-    "HELP_EMBED_ADD_FIELD_SETTINGS_VALUE" : "`/help`\n`/settings`",
+    "HELP_EMBED_ADD_FIELD_SETTINGS_VALUE" : "`/help`\n`/settings`\n`/change color`\n`/default channel`",
     "HELP_EMBED_ADD_FIELD_SOUND_TITLE" : "Ses",
-    "HELP_EMBED_ADD_FIELD_SOUND_VALUE" : "`/soundboard`\n   `-en`\n  `-tr`"
+    "HELP_EMBED_ADD_FIELD_SOUND_VALUE" : "`/speak`\n  `-en`\n  `-tr`\n  `-ja`\n  `-es`\n  `-it`\n  `-de`\n  `-ru`\n/soundboard\n  `-presets`\n  `-show`\n  `-play`",
+    "HELP_EMBED_ADD_FIELD_COMMAND_DESCRIPTION_TITLE" : "/{command} Kullanımı",
+    "HELP_EMBED_ADD_FIELD_AVATAR_COMMAND_DESCRIPTION" : "`member` : **İsteğe bağlı opsiyon** - Bir kullanıcı seçebilirsin. Herhangi bir kullanıcı seçmezsen kendi hesabın üzerinde işlem yaparsın.\n\n`/{command}` ile kendi hesabının veya farklı bir hesabın avatarını görüntülüyebilirsin.\nAlttaki butonlar sayesinde kullanıcının sunucu avatarı ve global avatarı arasında geçiş yapabilirsin.",
+    "HELP_EMBED_ADD_FIELD_LEVEL_COMMAND_DESCRIPTION" : "`member` : **İsteğe bağlı opsiyon** - Bir kullanıcı seçebilirsin. Herhangi bir kullanıcı seçmezsen kendi hesabın üzerinde işlem yaparsın.\n\n`/{command}` ile kendi hesabının veya farklı bir hesabın seviye kartını görüntülüyebilirsin.",
+    "HELP_EMBED_ADD_FIELD_HELP_COMMAND_DESCRIPTION" : "`/{command} komut_ismi`\n\nKomutların açıklamalarını ve ne işe yaradığını görebilirsin.",
+    "HELP_EMBED_ADD_FIELD_SETTINGS_COMMAND_DESCRIPTION" : "`/{command`\n\nAltındaki butonlar ile  Entropy'nin dilini ve gömülü mesajların rengini değiştirebilirsin. Ayrıca seviye sistemi için de seçili kanala test mesajı gönderebilirsin.",
+    "HELP_EMBED_ADD_FIELD_CHANGE_COLOR_COMMAND_DESCRIPTION" : "`color` : **Zorunlu opsiyon** - Hex formatında renk gir. Örnek olarak `CC0000`\n\nGömülü mesajların rengini daha kompleks renklerden seçmek için kullanabilirsin.",
+    "HELP_EMBED_ADD_FIELD_DEFAULT_CHANNEL_COMMAND_DESCRIPTION" : "`channel` : **Zorunlu opsiyon** - Bir metin kanalı seç.\n\nSeviye atlama mesajlarının gönderileceği kanalı seç.",
+    "HELP_EMBED_ADD_FIELD_SPEAK_COMMAND_DESCRIPTION" : "`en` : **Zorunlu opsiyon** - İngilizce seslendirme\n`tr` : **Zorunlu opsiyon** - Türkçe seslendirme\n`ja` : **Zorunlu opsiyon** - Japonca seslendirme\n`es` : **Zorunlu opsiyon** - İspanyolca seslendirme\n`it` : **Zorunlu opsiyon** - İtalyanca seslendirme\n`de` : **Zorunlu opsiyon** - \n`ru` : **Zorunlu opsiyon**\n" 
+
 
 }
